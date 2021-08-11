@@ -1,0 +1,109 @@
+col_w_trench = {
+	icon = 9
+	
+	potential = {
+		exists = owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = habitat
+			uses_district_set = machine_world
+		}
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_buildings_strongholds_cost_mult = -0.45
+		planet_orbital_bombardment_damage = -0.25
+		army_defense_damage_mult = 0.60
+		army_defense_morale_mult = 0.25
+	}
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_w_trench
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_stronghold value >= 2 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_stronghold value >= 3 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_stronghold value >= 4 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_fortress value >= 1 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_fortress value >= 2 }
+		}
+	}
+}
+
+col_w_guard = {
+	icon = 9
+		potential = {
+		exists = owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = habitat
+			uses_district_set = machine_world
+		}
+		is_special_colony_type = no
+	}
+	planet_modifier = {
+		planet_buildings_strongholds_cost_mult = -0.55
+		planet_orbital_bombardment_damage = -0.05
+		army_defense_damage_mult = 0.30
+		army_defense_morale_mult = 0.10
+		army_defense_health_mult = 0.10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_per_pop = 0.34
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_per_pop = 0.34
+		}
+	}
+		weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_w_guard
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_stronghold value >= 2 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_stronghold value >= 3 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_stronghold value >= 4 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_fortress value >= 1 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_fortress value >= 2 }
+		}
+	}
+}

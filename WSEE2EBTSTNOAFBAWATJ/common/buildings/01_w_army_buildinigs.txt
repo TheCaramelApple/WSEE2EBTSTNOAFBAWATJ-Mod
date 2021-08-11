@@ -1,0 +1,348 @@
+building_w_trenches = {
+	base_buildtime = 200
+	position_priority = 100
+	
+	category = army
+	
+	potential = {
+		buildings_simple_allow = yes
+	}
+	upgrades = {
+		building_w_trenches_artillery
+		building_w_trenches_heavy_artillery
+		building_w_trenches_medic
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		AND = {
+			free_building_slots = 0
+			owner = { 
+				used_naval_capacity_percent < 0.6
+				is_at_war = no # don't destroy while at war
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b1_minerals
+		}			
+		upkeep = {
+			energy = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_w_trench_warfare"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	planet_modifier = {
+		army_defense_morale_mult = 0.10
+		army_defense_health_mult = 0.10
+	}
+}
+
+building_w_trenches_artillery = {
+	base_buildtime = 200
+	position_priority = 100
+	can_build = no
+	
+	potential = {
+		buildings_simple_allow = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		AND = {
+			free_building_slots = 0
+			owner = { 
+				used_naval_capacity_percent < 0.6
+				is_at_war = no # don't destroy while at war
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_soldier_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b1_minerals
+		}			
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	prerequisites = {
+		"tech_w_artillery_trenches"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	planet_modifier = {
+		army_defense_morale_mult = 0.10
+		army_defense_health_mult = 0.10
+	}
+}
+
+building_w_trenches_heavy_artillery = {
+	base_buildtime = 200
+	position_priority = 100
+	can_build = no
+	category = army
+	
+	potential = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		AND = {
+			free_building_slots = 0
+			owner = { 
+				used_naval_capacity_percent < 0.6
+				is_at_war = no # don't destroy while at war
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b1_minerals
+		}			
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	prerequisites = {
+		"tech_w_heavy_artillery_trenches"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	planet_modifier = {
+		army_defense_morale_mult = 0.10
+		army_defense_health_mult = 0.10
+	}
+}
+
+building_w_trenches_medic = {
+	base_buildtime = 200
+	position_priority = 100
+	can_build = no
+	category = army
+	
+	potential = {
+		buildings_simple_allow = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		AND = {
+			free_building_slots = 0
+			owner = { 
+				used_naval_capacity_percent < 0.6
+				is_at_war = no # don't destroy while at war
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b1_minerals
+		}			
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	prerequisites = {
+		"tech_w_trench_medics"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	planet_modifier = {
+		army_defense_morale_mult = 0.10
+		army_defense_health_mult = 0.10
+	}
+}
+
+building_w_anti_bombardment = {
+	base_buildtime = 240
+	base_cap_amount = 2
+	position_priority = 100
+	
+	category = army
+	
+	potential = {
+		buildings_simple_allow = yes
+	}
+	
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b1_minerals
+		}			
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		AND = {
+			free_building_slots = 0
+			owner = { 
+				used_naval_capacity_percent < 0.6
+				is_at_war = no # don't destroy while at war
+			}
+		}
+	}
+	
+	prerequisites = {
+		"tech_planetary_defenses"
+	}
+	
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.40
+	}
+}

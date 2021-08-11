@@ -1,0 +1,554 @@
+building_w_warcrime_refinery = {
+	base_buildtime = @b2_time
+	
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	
+	upgrades = {
+		building_w_warcrime_refinery_upgraded
+	}
+	
+	country_modifier = {
+		army_attack_damage_mult = 0.025
+		army_attack_morale_mult = 0.025
+	}
+	
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = exotic_gases
+				value > 11
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_gas_refiner_add = 1
+			army_defense_damage_mult = 0.025
+			army_defense_morale_mult = 0.025
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 1
+			army_defense_damage_mult = 0.025
+			army_defense_morale_mult = 0.025
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	prerequisites = {
+		"tech_w_gas_warcrimes"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_gas_refiner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_gas_refiner_drone_effect_desc
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_w_warcrime_refinery_upgraded = {
+	base_buildtime = @b2_time
+	category = manufacturing
+	can_build = no
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = exotic_gases
+				value > 11
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_gas_refiner_add = 2
+			army_defense_damage_mult = 0.05
+			army_defense_morale_mult = 0.05
+		}
+	}
+	
+	country_modifier = {
+		army_attack_damage_mult = 0.05
+		army_attack_morale_mult = 0.05
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 2
+			army_defense_damage_mult = 0.5
+			army_defense_morale_mult = 0.5
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	prerequisites = {
+		"tech_w_advanced_gas_warcrimes"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_gas_refiner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_gas_refiner_drone_effect_desc
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_w_weapons_manufactorium = {
+	base_buildtime = 160
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	
+	upgrades = {
+		building_w_weapons_manufactorium_improved
+	}
+	
+	country_modifier = {
+		army_attack_damage_mult = 0.0125
+		planet_army_build_speed_mult = 0.0125
+	}
+	
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.025
+			planet_army_build_speed_mult = 0.0125
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.025
+			planet_army_build_speed_mult = 0.0125
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	prerequisites = {
+		"tech_w_standard_arms_manufactoring"
+	}
+}
+
+building_w_weapons_manufactorium_improved = {
+	base_buildtime = 160
+	category = manufacturing
+	can_build = no
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	
+	upgrades = {
+		building_w_weapons_manufactorium_advanced
+	}
+	
+	country_modifier = {
+		army_attack_damage_mult = 0.025
+		planet_army_build_speed_mult = 0.025
+	}
+	
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.050
+			planet_army_build_speed_mult = 0.025
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.05
+			planet_army_build_speed_mult = 0.025
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	prerequisites = {
+		"tech_w_improved_arms_manufactoring"
+	}
+}
+
+building_w_weapons_manufactorium_advanced = {
+	base_buildtime = 160
+	category = manufacturing
+	can_build = no
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	
+	upgrades = {
+		building_w_weapons_manufactorium_galactic
+	}
+	
+	country_modifier = {
+		army_attack_damage_mult = 0.05
+		planet_army_build_speed_mult = 0.05
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.1
+			planet_army_build_speed_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.1
+			planet_army_build_speed_mult = 0.05
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 10
+			alloys = 3
+		}
+	}
+
+	prerequisites = {
+		"tech_w_advanced_arms_manufactoring"
+	}
+}
+
+building_w_weapons_manufactorium_galactic = {
+	base_buildtime = 160
+	category = manufacturing
+	can_build = no
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	country_modifier = {
+		army_attack_damage_mult = 0.1
+		planet_army_build_speed_mult = 0.1
+	} 
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.2
+			planet_army_build_speed_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			army_defense_damage_mult = 0.2
+			planet_army_build_speed_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2500
+		}
+		upkeep = {
+			energy = 18
+			alloys = 6
+		}
+	}
+
+	prerequisites = {
+		"tech_w_galactic_arms_manufactoring"
+	}
+}
+
+building_w_space_elevator = {
+	base_buildtime = 180
+	category = manufacturing
+	
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	upgrades = {
+		building_w_space_elevator_improved
+	}
+	
+	country_modifier = {
+		ships_upkeep_mult = -0.025
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 3
+			alloys = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_w_space_elevator"
+	}
+}
+
+building_w_space_elevator_improved = {
+	base_buildtime = 180
+	category = manufacturing
+	can_build = no
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	upgrades = {
+		building_w_space_elevator_advanced
+	}
+	
+	country_modifier = {
+		ships_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 750
+		}
+		upkeep = {
+			energy = 6
+			alloys = 3
+		}
+	}
+
+	prerequisites = {
+		"tech_w_improved_space_elevator"
+	}
+}
+
+building_w_space_elevator_advanced = {
+	base_buildtime = 180
+	category = manufacturing
+	can_build = no
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	upgrades = {
+		building_w_space_elevator_galactic
+	}
+	
+	country_modifier = {
+		ships_upkeep_mult = -0.075
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1250
+		}
+		upkeep = {
+			energy = 9
+			alloys = 5
+		}
+	}
+
+	prerequisites = {
+		"tech_w_advanced_space_elevator"
+	}
+}
+
+building_w_space_elevator_galactic = {
+	base_buildtime = 180
+	category = manufacturing
+	can_build = no
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		building_basic_income_check = yes
+	}
+	
+	country_modifier = {
+		ships_upkeep_mult = -0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2500
+		}
+		upkeep = {
+			energy = 12
+			alloys = 7
+		}
+	}
+
+	prerequisites = {
+		"tech_w_galactic_space_elevator"
+	}
+}
