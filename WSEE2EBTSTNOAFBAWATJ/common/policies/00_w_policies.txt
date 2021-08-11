@@ -1,0 +1,1306 @@
+w_ground_combat_policy = {
+	allow = {
+		is_at_war = yes
+	}
+	option = {
+		name = "ground_combat_policy_valhalla"
+		policy_flags = {
+			ground_combat_policy_valhalla
+		}
+		modifier = {
+			army_disengage_chance_mult = -1.0
+			army_experience_gain_mult = 0.05
+			army_damage_mult = 0.10
+		}
+	}
+	option = {
+		name = "ground_combat_policy_default"
+		policy_flags = {
+			ground_combat_policy_default
+		}
+		modifier = {
+			army_experience_gain_mult = 0.05
+		}
+	}
+	option = {
+		name = "ground_combat_policy_survival"
+		policy_flags = {
+			ground_combat_policy_survival
+		}
+		modifier = {
+			army_disengage_chance_mult = -1.0
+			army_experience_gain_mult = 0.05
+			army_damage_mult = -0.10
+			}
+	}
+}
+
+
+w_warcrimes_policy = {
+	potential = {
+		has_technology = tech_w_gas_warcrimes
+	}
+	allow = {
+		is_at_war = no
+	}
+	option = { # NO WARCRIMES
+		name = "warcrime_stance_none"
+		
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.25
+			army_attack_morale_mult = -0.15
+			army_damage_mult = -0.25
+			army_attack_health_mult = -0.10
+			army_defense_health_mult = -0.10
+			army_defense_morale_mult = -0.15
+		}	
+	}
+	option= {# Warcrimes allowed
+		name = "warcrime_stance_some"
+		
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		
+		policy_flags = {
+			warcrime_stance_some
+		}
+		
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+			army_attack_morale_mult = 0.15
+			army_damage_mult = 0.25
+			army_attack_health_mult = 0.10
+			army_defense_health_mult = 0.10
+			army_defense_morale_mult = 0.15
+		}
+	}
+	option = { # ONLY WAR CRIMES BBY 
+		name = "warcrime_stance_all"
+		
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		policy_flags = {
+			warcrime_stance_all
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = -0.15
+			army_attack_morale_mult = 0.25
+			army_damage_mult = 0.35
+			army_attack_health_mult = 0.15
+			army_defense_health_mult = 0.15
+			army_defense_morale_mult = 0.20
+		}
+		
+	}
+}
+
+w_child_army_policy = {
+	potential = {
+		has_technology = tech_w_child_armies
+		OR = {	
+			has_policy_flag = warcrime_stance_all
+			has_policy_flag = warcrime_stance_some
+		}
+	}
+	option = {
+		name = "child_soldiers_allowed"
+		policy_flags = {
+			child_soldiers_allowed
+		}
+	}
+	option = {
+		name = "child_soldiers_outlawed"
+		policy_flags = {
+			child_soldiers_outlawed
+		}
+	}
+}
+
+w_fighting_primitive_policy = {
+	potential = {
+		has_technology = tech_planetary_defenses
+	}
+	#Fight them with honor
+	option = {
+		name = "primitive_stance_honor"
+		modifier = {
+			damage_vs_country_type_primitive_mult = -0.50
+		}
+	}
+	
+	option = {#Fight to minimize causualties
+		name = "primitive_stance_minimize"
+		modifier = {
+			damage_vs_country_type_primitive_mult = -0.25
+		}
+	}
+	
+	option = {#Treat them equal to a fellow star nation
+		name = "primitive_stance_equal"
+	}
+	#have they heard of recreational tactical nukings?
+	option = {
+		name = "primitve_stance_nukes"
+		modifier = {
+			damage_vs_country_type_primitive_mult = 1.50
+		}
+	}
+}
+
+w_baseline_doctrine = {
+	potential = {
+		has_technology = tech_w_fleet_doctrine_stage_one
+	}
+	option = { # quality
+		name = "baseline_doctrine_quality"
+		modifier = {
+			starbase_shipyard_build_cost_mult = 0.15
+			starbase_shipyard_build_speed_mult = -0.15
+		}
+		policy_flags = {
+			doctrine_baseline_qualitiy
+		}
+		
+	}
+	
+	option = { #quantity
+		name = "baseline_doctrine_quantity"
+		modifier = {
+			starbase_shipyard_build_cost_mult = -0.15
+			starbase_shipyard_build_speed_mult = 0.15
+		}
+		policy_flags = {
+			doctrine_baseline_quantity
+		}
+		
+	}
+}
+
+w_baseline_doctrine_quantity_sub = {
+	potential = {
+		has_technology = tech_w_fleet_doctrine_stage_one
+		has_policy_flag = doctrine_baseline_quantity
+	}
+	
+	option = { #quality mass production
+		name = "baseline_doctrine_quantity_sub_quality"
+		modifier = {
+			starbase_shipyard_build_cost_mult = -0.10
+			starbase_shipyard_build_speed_mult = 0.10
+			ship_armor_mult = -0.05
+			ship_evasion_mult = -0.05
+			ship_fire_rate_mult = -0.05
+			ship_shield_mult = -0.05
+			ships_upkeep_mult = -0.10
+		}
+		policy_flags = {
+			doctrine_baseline_quantity_quality
+		}
+	}
+	
+	option = { #minimum mass production
+		name = "baseline_doctrine_quantity_sub_minimum"
+		modifier = {
+			starbase_shipyard_build_cost_mult = -0.15
+			starbase_shipyard_build_speed_mult = 0.15
+			ship_armor_mult = -0.10
+			ship_evasion_mult = -0.10
+			ship_fire_rate_mult = -0.10
+			ship_shield_mult = -0.10
+			ships_upkeep_mult = -0.15
+		}
+		policy_flags = {
+			doctrine_baseline_quantity_minimum
+		}
+	}
+	
+	option = { #cheapest mass production
+		name = "baseline_doctrine_quantity_sub_cheapest"
+		modifier = {
+			starbase_shipyard_build_cost_mult = -0.25
+			starbase_shipyard_build_speed_mult = 0.25
+			ship_armor_mult = -0.15
+			ship_evasion_mult = -0.15
+			ship_fire_rate_mult = -0.15
+			ship_shield_mult = -0.15
+			ships_upkeep_mult = -0.25
+		}
+		policy_flags = {
+			doctrine_baseline_quantity_cheapest
+		}
+	}
+}
+
+w_baseline_doctrince_qaulity_sub = {
+	potential = {
+		has_technology = tech_w_fleet_doctrine_stage_one
+		has_policy_flag = doctrine_baseline_qualitiy
+	}
+	
+	option = { #best quality ships
+		name = "baseline_doctrine_quality_sub_best"
+		modifier = {
+			starbase_shipyard_build_cost_mult = 0.20
+			starbase_shipyard_build_speed_mult = -0.20
+			ship_armor_mult = 0.15
+			ship_evasion_mult = 0.15
+			ship_fire_rate_mult = 0.15
+			ship_shield_mult = 0.15
+			ships_upkeep_mult = 0.20
+		}
+		policy_flags = {
+			doctrine_baseline_qualitiy_best
+		}
+	}
+	
+	option = { #high quality ships
+		name = "baseline_doctrine_quality_sub_high"
+		modifier = {
+			starbase_shipyard_build_cost_mult = 0.15
+			starbase_shipyard_build_speed_mult = -0.15
+			ship_armor_mult = 0.10
+			ship_evasion_mult = 0.10
+			ship_fire_rate_mult = 0.10
+			ship_shield_mult = 0.10
+			ships_upkeep_mult = 0.15
+		}
+		policy_flags = {
+			doctrine_baseline_qualitiy_high
+		}
+	}
+	
+	option = { #above average quality ships
+		name = "baseline_doctrine_quality_sub_above"
+		modifier = {
+			starbase_shipyard_build_cost_mult = 0.10
+			starbase_shipyard_build_speed_mult = -0.10
+			ship_armor_mult = 0.05
+			ship_evasion_mult = 0.05
+			ship_fire_rate_mult = 0.05
+			ship_shield_mult = 0.5
+			ships_upkeep_mult = 0.10
+		}
+		policy_flags = {
+			doctrine_baseline_qualitiy_above
+		}
+	}
+}
+
+w_first_gen_doctrine = {
+	potential = {
+		has_technology = tech_w_fleet_doctrine_stage_one
+		OR = {
+			has_policy_flag = doctrine_baseline_qualitiy
+			has_policy_flag = doctrine_baseline_quantity
+		}
+	}
+	
+	option = { # Quality required one - steel is war - increase shield and armor penetration
+		name = "gen_one_doctrine_steel"
+		potential = {
+			has_policy_flag = doctrine_baseline_qualitiy
+		}
+		modifier = {
+			ship_shield_penetration_mult = 0.10
+			ship_armor_penetration_mult = 0.10
+		}
+		policy_flags = {
+			doctrine_gen_one_steel
+		}
+	}
+	
+	option = { # Quantity required one - bullets is war - increase ship firing speed
+		name = "gen_one_doctrine_bullets"
+		potential = {
+			has_policy_flag = doctrine_baseline_quantity
+		}
+		modifier = {
+			ship_fire_rate_mult = 0.10
+		}
+		policy_flags = {
+			doctrine_gen_one_bullets
+		}
+	}
+	
+	option = { # Available one - speed is war - increase ship travel speed and evasion
+		name = "gen_one_doctrine_speed"
+		modifier = {
+			ship_evasion_mult = 0.10
+			ship_speed_mult = 0.10
+		}
+		policy_flags = {
+			doctrine_gen_one_speed
+		}
+	}
+	
+	option = { # Available one - defense is war - increase ship armor and shield as well as home fire rate
+		name = "gen_one_doctrine_defense"
+		modifier = {
+			ship_shield_mult = 0.10
+			ship_armor_mult = 0.10
+			ship_home_territory_fire_rate_mult = 0.10
+		}
+		policy_flags = {
+			doctrine_gen_one_defense
+		}
+	}
+}
+
+w_first_gen_doctrine_steel_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_one_steel
+	}
+	
+	option = { #Higher penetration, increase ship cost, Purified Steel is war
+		name = "gen_one_doctrine_steel_sub_purified"
+		modifier = {
+			ship_shield_penetration_mult = 0.05
+			ship_armor_penetration_mult = 0.05
+			starbase_shipyard_build_cost_mult = 0.05
+		}
+		policy_flags = {
+			doctrine_gen_one_steel_purified
+		}
+	}
+	
+	option = { # No further modifications, Steel is war
+		name = "gen_one_doctrine_steel_sub_none"
+		policy_flags = {
+			doctrine_gen_one_steel_none
+		}
+	}
+	
+	option = { #Slightly decreased penetration, slightly reduced ship cost, Unpurified Steel is war
+		name = "gen_one_doctrine_steel_sub_unpurified"
+		modifier = {
+			ship_shield_penetration_mult = -0.05
+			ship_armor_penetration_mult = -0.05
+			starbase_shipyard_build_cost_mult = -0.05
+		}
+		policy_flags = {
+			doctrine_gen_one_steel_unpurified
+		}
+	}
+}
+
+w_first_gen_doctrine_bullets_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_one_bullets
+	}
+	
+	option = { # More bullets is war, higher fire rate, decreased penetration
+		name = "gen_one_doctrine_bullets_sub_more"
+		policy_flags = {
+			doctrine_gen_one_bullets_more
+		}
+		modifier = {
+			ship_armor_penetration_mult = -0.05
+			ship_shield_penetration_mult = -0.05
+			ship_fire_rate_mult = 0.10
+		}
+	}
+	
+	option = { # Bullets are war
+		name = "gen_one_doctrine_bullets_sub_none"
+		policy_flags = {
+			doctrine_gen_one_bullets_none
+		}
+	}
+	
+	option = { # Less bullets is war, lower fire rate, increase penetration
+		name = "gen_one_doctrine_bullets_sub_less"
+		policy_flags = {
+			doctrine_gen_one_bullets_less
+		}
+		modifier = {
+			ship_armor_penetration_mult = 0.05
+			ship_shield_penetration_mult = 0.05
+			ship_fire_rate_mult =-0.10
+		}
+	}
+}
+
+w_first_gen_doctrine_speed_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_one_speed
+	}
+	
+	option = { # high speed and evasion is war, increased speed and evasion
+		name = "gen_one_doctrine_speed_sub_high"
+		policy_flags = {
+			doctrine_gen_one_speed_high
+		}
+		modifier = {
+			ship_speed_mult = 0.25
+			ship_evasion_mult = 0.25
+			starbase_shipyard_build_cost_mult = 0.05
+		}
+	}
+	
+	option = { # spped is war
+		name = "gen_one_doctrine_speed_sub_none"
+		policy_flags = {
+			doctrine_gen_one_speed_none
+		}
+	}
+	
+	option = { # More ships is war, increased ship build speed
+		name = "gen_one_doctrine_speed_sub_ships"
+		policy_flags = {
+			doctrine_gen_one_speed_ships
+		}
+		modifier = {
+			starbase_shipyard_build_speed_mult = 0.10
+			starbase_shipyard_build_cost_mult = 0.05
+		}
+	}
+}
+
+w_first_gen_doctrine_defense_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_one_defense
+	}
+	
+	option = { # Rapid Response is Defense, faster ftl, move speed and evasion
+		name = "gen_one_doctrine_defense_sub_rapid"
+		policy_flags = {
+			doctrine_gen_one_defense_rapid
+		}
+		modifier = {
+			ship_speed_mult = 0.10
+			ship_evasion_mult = 0.15
+			ship_home_territory_fire_rate_mult = -0.10
+		}
+	}
+	
+	option = { # Defense is war
+		name = "gen_one_doctrine_defense_sub_none"
+		policy_flags = {
+			doctrine_gen_one_defense_none
+		}
+	}
+	
+	option = { # Fleets are defense, more home territory fire rate, build speed increased
+		name = "gen_one_doctrine_defense_sub_fleets"
+		policy_flags = {
+			doctrine_gen_one_defense_fleets
+		}
+		
+		modifier = {
+			ship_home_territory_fire_rate_mult = 0.15
+			starbase_shipyard_build_speed_mult = 0.10
+			starbase_shipyard_build_cost_mult = -0.05
+		}
+	}
+}
+
+w_second_gen_doctrine = {
+	potential = {
+		has_technology = tech_w_fleet_doctrine_stage_two
+	}
+	
+	option = { # steel required option, Artillery is war, increase artillery damage
+		name = "gen_two_doctrine_artillery"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_one_steel
+				has_policy_flag = doctrine_gen_one_steel_none
+				has_policy_flag = doctrine_gen_one_steel_purified
+				has_policy_flag = doctrine_gen_one_steel_unpurified
+			}
+		}
+		policy_flags = {
+			doctrine_gen_two_artillery
+		}
+		modifier = {
+			weapon_role_artillery_weapon_damage_mult = 0.15
+			weapon_role_artillery_weapon_fire_rate_mult = 0.05
+			ship_engagement_range_mult = 0.10
+			ship_weapon_range_mult = 0.10
+		}
+	}
+	
+	option = { # bullets required option, Ships are war, increase ship build speed
+		name = "gen_two_doctrine_ships"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_one_bullets
+				has_policy_flag = doctrine_gen_one_bullets_less
+				has_policy_flag = doctrine_gen_one_bullets_more
+				has_policy_flag = doctrine_gen_one_bullets_none
+			}
+		}
+		policy_flags = {
+			doctrine_gen_two_ships
+		}
+		modifier = {
+			starbase_shipyard_build_speed_mult = 0.25
+		}
+	}
+	
+	option = { # Speed required option, Tactics are war, incerase jump drive range, decrease jump drive cd
+		name = "gen_two_doctrine_tactics"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_one_speed
+				has_policy_flag = doctrine_gen_one_speed_none
+				has_policy_flag = doctrine_gen_one_speed_ships
+				has_policy_flag = doctrine_gen_one_speed_high
+			}
+		}
+		policy_flags = {
+			doctrine_gen_two_tactics
+		}
+		modifier = {
+			ship_ftl_jumpdrive_range_mult = 0.15
+			ship_jumpdrive_cooldown_mult = -0.10
+		}
+	}
+	
+	option = {# defense required option, Stations are war, increase station Hp, Dmg and range
+		name = "gen_two_doctrine_stations"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_one_defense
+				has_policy_flag = doctrine_gen_one_defense_none
+				has_policy_flag = doctrine_gen_one_defense_rapid
+				has_policy_flag = doctrine_gen_one_defense_fleets
+			}
+		}
+		policy_flags = {
+			doctrine_gen_two_station
+		}
+		modifier = {
+			shipclass_starbase_hull_mult = 0.15
+			shipclass_starbase_damage_mult = 0.15
+			country_starbase_capacity_add = 3
+		}
+	}
+	
+	option = { # Technology is war, increase research speed
+		name = "gen_two_doctrine_technology"
+		policy_flags = {
+			doctrine_gen_two_tech
+		}
+		modifier = {
+			all_technology_research_speed = 0.05
+		}
+	}
+	
+	option = { # Factories are war, increase metallgulrist and civilian factory output
+		name = "gen_two_doctrine_factories"
+		policy_flags = {
+			doctrine_gen_two_factory
+		}
+		modifier = {
+			planet_jobs_specialist_alloys_produces_mult = 0.15
+			planet_jobs_specialist_consumer_goods_produces_mult = 0.15
+		}
+	}
+}
+
+w_second_gen_doctrine_artillery_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_two_artillery
+	}
+	option = { #Energy weapons are war
+		name = "gen_two_doctrine_artillery_sub_energy"
+		policy_flags = {
+			doctrine_gen_two_artillery_energy
+		}
+		modifier = {
+			weapon_type_energy_weapon_damage_mult = 0.15
+			weapon_type_kinetic_weapon_damage_mult = -0.15
+		}
+	}
+	option = {#default artillery is war
+		name = "gen_two_doctrine_artillery_sub_none"
+		policy_flags = {
+			doctrine_gen_two_artillery_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {# Kinetic weapons are war
+		name = "gen_two_doctrine_artillery_sub_kinetic"
+		policy_flags = {
+			doctrine_gen_two_artillery_kinetic
+		}
+		modifier = {
+			weapon_type_kinetic_weapon_damage_mult = 0.15
+			weapon_type_energy_weapon_damage_mult = -0.15
+		}
+	}
+}
+
+w_second_gen_doctrine_ships_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_two_ships
+	}
+	option = {# Small ships are war, increase corvette/destoyer build speed and decrease cost
+		name = "gen_two_doctrine_ships_sub_small"
+		policy_flags = {
+			doctrine_gen_two_ships_small
+		}
+		modifier = {
+			shipsize_corvette_build_speed_mult = -0.25
+			ship_corvette_cost_mult = -0.15
+			shipsize_destroyer_build_speed_mult = -0.25
+			ship_destroyer_cost_mult = -0.15
+			ship_cruiser_cost_mult = 0.15
+			ship_battleship_cost_mult = 0.15
+			shipsize_cruiser_build_speed_mult = 0.25
+			shipsize_battleship_build_speed_mult = 0.25
+		}
+	}
+	option = {# default ships are war
+		name = "gen_two_doctrine_ships_sub_none"
+		policy_flags = {
+			doctrine_gen_two_ships_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {# Large ships are war, increase cruiser/battleship build speed and decrease cost
+		name = "gen_two_doctrine_ships_sub_large"
+		policy_flags = {
+			doctrine_gen_two_ships_large
+		}
+		modifier = {
+			ship_cruiser_cost_mult = -0.15
+			ship_battleship_cost_mult = -0.15
+			shipsize_cruiser_build_speed_mult = -0.25
+			shipsize_battleship_build_speed_mult = -0.25
+			shipsize_corvette_build_speed_mult = 0.25
+			ship_corvette_cost_mult = 0.15
+			shipsize_destroyer_build_speed_mult = 0.25
+			ship_destroyer_cost_mult = 0.15
+		}
+	}
+	
+}
+
+w_second_gen_doctrine_tectics_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_two_tactics
+	}
+	option = {# Jumpdrives are tactics, increase jump drive range, decrease cooldown, decrease ship evasion
+		name = "gen_two_doctrine_tactics_sub_jump"
+		policy_flags = {
+			doctrine_gen_two_tactics_jumpdrive
+		}
+		modifier = {
+			ship_jumpdrive_cooldown_mult = -0.15
+			ship_disengage_chance_mult = -0.15
+			ship_ftl_jumpdrive_range_mult = 0.15
+		}
+	}
+	option = { # default tactics are war
+		name = "gen_two_doctrine_tactics_sub_none"
+		policy_flags = {
+			doctrine_gen_two_tactics_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {# survival is tactics, increase ship disengage chance
+		name = "gen_two_doctrine_tactics_sub_survival"
+		policy_flags = {
+			doctrine_gen_two_tactics_survival
+		}
+		modifier = {
+			ship_disengage_chance_mult = 0.50
+		}
+	}
+}
+
+w_second_gen_doctrine_station_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_two_station
+	}
+	option = {# station offense is war
+		name = "gen_two_doctrine_stations_sub_off"
+		policy_flags = {
+			doctrine_gen_two_station_offense
+		}
+		modifier = {
+			shipclass_starbase_damage_mult = 0.15
+			shipclass_starbase_evasion_add = 25
+		}
+	}
+	option = {# default stations are war
+		name = "gen_two_doctrine_stations_sub_none"
+		policy_flags = {
+			doctrine_gen_two_station_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {# station defense is war
+		name = "gen_two_doctrine_stations_sub_def"
+		policy_flags = {
+			doctrine_gen_two_station_defense
+		}
+		modifier = {
+			starbase_defense_platform_capacity_add = 2
+			shipclass_starbase_hull_mult = 0.15
+		}
+	}
+}
+
+w_second_gen_doctrine_tech_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_two_tech
+	}
+	option = {# physics research is prioritized
+		name = "gen_two_doctrine_tech_sub_phy"
+		policy_flags = {
+			doctrine_gen_two_tech_physics
+		}
+		modifier = {
+			country_physics_tech_research_speed = 0.10
+			country_society_tech_research_speed = -0.05
+			country_engineering_tech_research_speed = -0.05
+		}
+	}
+	option = { # default, Technology is war
+		name = "gen_two_doctrine_tech_sub_none"
+		policy_flags = {
+			doctrine_gen_two_tech_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {# society research is priortized
+		name = "gen_two_doctrine_tech_sub_society"
+		policy_flags = {
+			doctrine_gen_two_tech_society
+		}
+		modifier = {
+			country_physics_tech_research_speed = -0.05
+			country_society_tech_research_speed = 0.10
+			country_engineering_tech_research_speed = -0.05
+		}
+	}
+	option = {# engineering research is prioritized
+		name = "gen_two_doctrine_tech_sub_eng"
+		policy_flags = {
+			doctrine_gen_two_tech_engineering
+		}
+		modifier = {
+			country_physics_tech_research_speed = -0.05
+			country_society_tech_research_speed = -0.05
+			country_engineering_tech_research_speed = 0.10
+		}
+	}
+}
+
+w_second_gen_doctrine_factories_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_two_factory
+	}
+	option = {# military industry is war, increase build speed of ships, increase alloy production,
+		name = "gen_two_doctrine_factories_sub_mil"
+		policy_flags = {
+			doctrine_gen_two_factory_military
+		}
+		modifier = {
+			planet_jobs_specialist_alloys_produces_mult = 0.10
+			starbase_shipyard_build_speed_mult = 0.10
+		}
+	}
+	option = { # default, Factories are war
+		name = "gen_two_doctrine_factories_sub_none"
+		policy_flags = {
+			doctrine_gen_two_factory_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = { # Civilian industry is war, increase build time of ships, increase consumer goods production, decrease ship build cost
+		name = "gen_two_doctrine_factories_sub_civ"
+		policy_flags = {
+			doctrine_gen_two_factory_civilian
+		}
+		modifier = {
+			planet_jobs_specialist_consumer_goods_produces_mult = 0.10
+			starbase_shipyard_build_cost_mult = -0.10
+			starbase_shipyard_build_speed_mult = -0.10
+		}
+	}
+}
+
+w_third_gen_doctrine = {
+	potential = {
+		has_technology = tech_w_fleet_doctrine_stage_three
+	}
+	
+	option = { # factory required option. Economy is war,
+		name = "doctrine_gen_three_economy"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_two_factory
+				has_policy_flag = doctrine_gen_two_factory_civilian
+				has_policy_flag = doctrine_gen_two_factory_military
+				has_policy_flag = doctrine_gen_two_factory_none
+			}
+		}
+		policy_flags = {
+			doctrine_gen_three_economy
+		}
+		modifier = {
+			country_energy_produces_add = 10
+			country_energy_produces_mult = 0.05
+		}
+	}
+	option = { # tech required option, supremacy is war
+		name = "doctrine_gen_three_supremacy"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_two_tech
+				has_policy_flag = doctrine_gen_two_tech_none
+				has_policy_flag = doctrine_gen_two_tech_physics
+				has_policy_flag = doctrine_gen_two_tech_society
+				has_policy_flag = doctrine_gen_two_tech_engineering
+			}
+		}
+		policy_flags = {
+			doctrine_gen_three_supremacy
+		}
+		modifier = {
+			all_technology_research_speed = 0.15
+		}
+	}
+	option = { # Station required, logistics is war
+		name = "doctrine_gen_three_logistics"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_two_station
+				has_policy_flag = doctrine_gen_two_station_defense
+				has_policy_flag = doctrine_gen_two_station_offense
+				has_policy_flag = doctrine_gen_two_station_none
+			}
+		}
+		policy_flags = {
+			doctrine_gen_three_logistics
+		}
+		modifier = {
+			country_naval_cap_add = 50
+		}
+	}
+	option = { # tactics required, Leaders are war
+		name = "doctrine_gen_three_leaders"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_two_tactics
+				has_policy_flag = doctrine_gen_two_tactics_jumpdrive
+				has_policy_flag = doctrine_gen_two_tactics_none
+				has_policy_flag = doctrine_gen_two_tactics_survival
+			}
+		}
+		policy_flags = {
+			doctrine_gen_three_leaders
+		}
+		modifier = {
+			leader_cost_empire_size_mult = -0.15
+			leader_upkeep_empire_size_mult = -0.15
+			species_leader_exp_gain = 15
+		}
+	}
+	option = { # ships required, Ship types
+		name = "doctrine_gen_three_ship_selection"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_two_ships
+				has_policy_flag = doctrine_gen_two_ships_large
+				has_policy_flag = doctrine_gen_two_ships_small
+				has_policy_flag = doctrine_gen_two_ships_none
+			}
+		}
+		policy_flags = {
+			doctrine_gen_three_ship_selection
+		}
+		modifier = {
+			ships_upkeep_mult = -0.05
+		}
+	}
+	option = { # artilery required, siege is war Defensive siege
+		name = "doctrine_gen_three_siege"
+		potential = {
+			OR = {
+				has_policy_flag = doctrine_gen_two_artillery
+				has_policy_flag = doctrine_gen_two_artillery_none
+				has_policy_flag = doctrine_gen_two_artillery_kinetic
+				has_policy_flag = doctrine_gen_two_artillery_energy
+			}
+		}
+		policy_flags = {
+			doctrine_gen_three_siege
+		}
+		modifier = {
+			shipsize_starbase_outpost_hull_mult = 0.05
+			shipsize_starbase_outpost_hull_add = 100
+			shipsize_starbase_starport_hull_mult = 0.05
+			shipsize_starbase_starport_hull_add = 100
+			shipsize_starbase_starhold_hull_mult = 0.05
+			shipsize_starbase_starhold_hull_add = 100
+			shipsize_starbase_starfortress_hull_mult = 0.05
+			shipsize_starbase_starfortress_hull_add = 100
+			shipsize_starbase_citadel_hull_mult = 0.05
+			shipsize_starbase_citadel_hull_add = 100
+		}
+	}
+	option = { # Offenseive Siege
+		name = "doctrine_gen_three_o_siege"
+		policy_flags = {
+			doctrine_gen_three_o_siege
+		}
+		modifier = {
+			ship_damage_against_starbases_mult = 0.15
+		}
+	}
+	option = { # glass is war
+		name = "doctrine_gen_three_planetary_glassing"
+		policy_flags = {
+			doctrine_gen_three_planetary_glassing
+		}
+		modifier = {
+			planet_orbital_bombardment_damage = 0.25
+			ship_orbital_bombardment_mult = 0.25
+		}
+	}
+}
+
+w_third_gen_doctrine_economy_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_economy
+	}
+	option = {
+		name = "doctrine_gen_three_economy_sub_stonks"
+		policy_flags = {
+			doctrine_gen_three_economy_sub_stonks
+		}
+		modifier = {
+			country_trade_fee = -0.10
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_economy_sub_none"
+		policy_flags = {
+			doctrine_gen_three_economy_sub_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_economy_sub_energy"
+		policy_flags = {
+			doctrine_gen_three_economy_sub_energy
+		}
+		modifier = {
+			country_energy_produces_add = 10
+			country_energy_produces_mult = 0.05
+		}
+	}
+}
+
+w_third_gen_doctrine_supremacy_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_supremacy
+	}
+	option = {
+		name = "doctrine_gen_three_supremacy_sub_physics"
+		policy_flags = {
+			doctrine_gen_three_supremacy_sub_physics
+		}
+		modifier = {
+			country_physics_tech_research_speed = 0.10
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_supremacy_sub_society"
+		policy_flags = {
+			doctrine_gen_three_supremacy_sub_society
+		}
+		modifier = {
+			country_society_tech_research_speed = 0.10
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_supremacy_sub_engineering"
+		policy_flags = {
+			doctrine_gen_three_supremacy_sub_engineering
+		}
+		modifier = {
+			country_engineering_tech_research_speed = 0.10
+		}
+	}
+	option = { #Return to monke
+		name = "doctrine_gen_three_supremacy_sub_reject"
+		policy_flags = {
+			doctrine_gen_three_supremacy_sub_reject
+		}
+		modifier = {
+			all_technology_research_speed = -10000.00
+		}
+	}
+}
+
+w_third_gen_doctrine_logistics_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_logistics
+	}
+	option = {
+		name = "doctrine_gen_three_logistics_sub_military"
+		policy_flags = {
+			doctrine_gen_three_logistics_sub_military
+		}
+		modifier = {
+			country_naval_cap_add = 50
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_logistics_sub_none"
+		policy_flags = {
+			doctrine_gen_three_logistics_sub_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_logistics_sub_civilian"
+		policy_flags = {
+			doctrine_gen_three_logistics_sub_civilian
+		}
+		modifier = {
+			country_consumer_goods_produces_add = 10
+			country_consumer_goods_produces_mult = 0.05
+		}
+	}
+}
+
+w_third_gen_doctrine_leaders_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_leaders
+	}
+	option = {
+		name = "doctrine_gen_three_leaders_sub_size"
+		policy_flags = {
+			doctrine_gen_three_leaders_sub_size
+		}
+		modifier = {
+			country_leader_pool_size = 2
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_leaders_sub_none"
+		policy_flags = {
+			doctrine_gen_three_leaders_sub_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_leaders_sub_age"
+		policy_flags = {
+			doctrine_gen_three_leaders_sub_age
+		}
+		modifier = {
+			leader_age = 10
+		}
+	}
+}
+
+w_third_gen_doctrine_ship_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_ship_selection
+	}
+	option = {
+		name = "doctrine_gen_three_ship_selection_sub_corvettes"
+		policy_flags = {
+			doctrine_gen_three_ship_selection_sub_corvettes
+		}
+		modifier = {
+			ship_corvette_cost_mult = -0.25
+			ship_corvette_time_cost_mult = -0.25
+			ship_corvette_alloys_cost_mult = -0.25
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_ship_selection_sub_destroyers"
+		policy_flags = {
+			doctrine_gen_three_ship_selection_sub_destroyers
+		}
+		modifier = {
+			ship_destroyer_cost_mult = -0.25
+			ship_destroyer_time_cost_mult = -0.25
+			ship_destroyer_alloys_cost_mult = -0.25
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_ship_selection_sub_none"
+		policy_flags = {
+			doctrine_gen_three_ship_selection_sub_none
+		}
+		modifier = {
+			ship_destroyer_cost_mult = -0.25
+			ship_destroyer_time_cost_mult = -0.25
+			ship_destroyer_alloys_cost_mult = -0.25
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_ship_selection_sub_cruisers"
+		policy_flags = {
+			doctrine_gen_three_ship_selection_sub_cruisers
+		}
+		modifier = {
+			ship_cruiser_cost_mult = -0.25
+			ship_cruiser_time_cost_mult = -0.25
+			ship_cruiser_alloys_cost_mult = -0.25
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_ship_selection_sub_battleships"
+		policy_flags = {
+			doctrine_gen_three_ship_selection_sub_battleships
+		}
+		modifier = {
+			ship_battleship_cost_mult = -0.25
+			ship_battleship_time_cost_mult = -0.25
+			ship_battleship_alloys_cost_mult = -0.25
+		}
+	}
+}
+
+w_third_gen_doctrine_siege_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_siege
+	}
+	option = {
+		name = "doctrine_gen_three_siege_sub_armor"
+		policy_flags = {
+			doctrine_gen_three_siege_sub_armor
+		}
+		modifier = {
+			shipsize_starbase_outpost_hull_mult = 0.05
+			shipsize_starbase_outpost_hull_add = 500
+			shipsize_starbase_starport_hull_mult = 0.05
+			shipsize_starbase_starport_hull_add = 1000
+			shipsize_starbase_starhold_hull_mult = 0.05
+			shipsize_starbase_starhold_hull_add = 2000
+			shipsize_starbase_starfortress_hull_mult = 0.05
+			shipsize_starbase_starfortress_hull_add = 3000
+			shipsize_starbase_citadel_hull_mult = 0.05
+			shipsize_starbase_citadel_hull_add = 5000
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_siege_sub_none"
+		policy_flags = {
+			doctrine_gen_three_siege_sub_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_siege_sub_weaponry"
+		policy_flags = {
+			doctrine_gen_three_siege_sub_weaponry
+		}
+		modifier = {
+			shipclass_starbase_damage_mult = 0.35
+		}
+	}
+}
+
+w_third_gen_doctrine_o_siege_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_o_siege
+	}
+	option = {
+		name = "doctrine_gen_three_o_siege_sub_war"
+		policy_flags = {
+			doctrine_gen_three_o_siege_sub_war
+		}
+		modifier = {
+			ship_damage_against_starbases_mult = 0.25
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_o_siege_sub_none"
+		policy_flags = {
+			doctrine_gen_three_o_siege_sub_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_o_siege_sub_operation"
+		policy_flags = {
+			doctrine_gen_three_o_siege_sub_operation
+		}
+		modifier = {
+			operation_sabotage_starbase_speed_mult = 0.25
+			operation_sabotage_starbase_skill_add = 1
+		}
+	}
+}
+
+w_third_gen_doctrine_glass_sub = {
+	potential = {
+		has_policy_flag = doctrine_gen_three_planetary_glassing
+	}
+	option = {
+		name = "doctrine_gen_three_glassing_sub_planet"
+		policy_flags = {
+			doctrine_gen_three_glassing_sub_planet
+		}
+		modifier = {
+			planet_orbital_bombardment_damage = 0.5
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_glassing_sub_none"
+		policy_flags = {
+			doctrine_gen_three_glassing_sub_none
+		}
+		modifier = {
+			
+		}
+	}
+	option = {
+		name = "doctrine_gen_three_glassing_sub_ship"
+		policy_flags = {
+			doctrine_gen_three_glassing_sub_ship
+		}
+		modifier = {
+			ship_orbital_bombardment_mult = 0.25
+		}
+	}
+}

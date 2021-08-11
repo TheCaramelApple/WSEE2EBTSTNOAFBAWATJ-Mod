@@ -1,0 +1,41 @@
+###########
+#Meme species traits
+############
+
+w_trait_blessed_t_xenophilia = {
+	cost = 1
+	modification = yes
+	initial = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT }
+	modifier = {
+		pop_ethic_xenophile_attraction_mult = 1.0
+	}
+}
+
+w_trait_blessed_c_creeper = {
+	cost = 1
+	modification = yes
+	initial = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT }
+	modifier = {
+		army_damage_mult = 5.0
+		army_collateral_damage_mult = 5.0
+		army_morale_damage_mult = 10.0
+		army_defense_damage_mult =5.0
+		army_attack_damage_mult = 5.0
+		army_attack_health_mult = -5.0
+	}
+}
+#########
+#Non meem traits
+#######
+
+w_trait_stellaris_players = {
+	cost = 2
+	modification = yes
+	initial = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID ROBOT }
+	modifier = {
+		army_morale_damage_mult = 0.05
+	}
+}
