@@ -1,0 +1,21 @@
+﻿l_english:
+ 
+ #######################
+ #War events
+ ################
+ w_war_events.1.name:0 "An Admiral graduates from our War Academny."
+ w_war_events.1.desc:0 "An accomplished graduate of our War Academny has been inducted into our ranks of Admirals."
+ w_war_events.2.name:0 "A General Graduates from our War Academny."
+ w_war_events.2.desc:0 "An accomplished graduate of our War Academny has been inducted into our ranks of Generals"
+ w_war_events.3.name:0 "Our People Are Rioting!"
+ w_war_events.3.desc:0 "Our people are rioting at our lack of conflict with other space faring empires!"
+ w_war_events.4.name:0 "Our People Are Celebrating!"
+ w_war_events.4.desc:0 "With the outbreak of war our people are throwing parties as our soldiers prepare to fight our enemies."
+ w_war_events.5.name:0 "Our People Celebrate!"
+ w_war_events.5.desc:0 "With our empire not being in any wars our people are celebrating."
+ w_war_events.6.name:0 "Our People Are Protesting"
+ w_war_events.6.desc:0 "Due to our continued involvemnet in the war our people have begun to protest."
+ w_war_events.7.name:0 "Our People Celebrate!"
+ w_war_events.7.desc:0 "Due to us continually being at war our people are celebrating."
+ w_war_events.8.name:0 "Our People Protest"
+ w_war_events.8.desc:0 "Our people are protesting due to our involvement in the war."
