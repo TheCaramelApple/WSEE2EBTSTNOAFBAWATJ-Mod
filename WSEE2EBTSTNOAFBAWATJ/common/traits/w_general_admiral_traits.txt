@@ -1,0 +1,152 @@
+#Admiral Traits
+###########
+w_leader_trait_carrier_genius = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.15
+		weapon_type_strike_craft_weapon_fire_rate_mult = 0.15
+		weapon_type_strike_craft_speed_mult = 0.15
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "w_leader_trait_carrier_proffecient" }
+}
+
+w_leader_trait_tactictian = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		ship_weapon_range_mult = 0.05
+		ship_engagement_range_mult = 0.05
+		ship_accuracy_mult = 0.05
+		ship_evasion_mult = 0.05
+		ship_shield_penetration_mult = 0.05
+		ship_armor_penetration_mult = 0.05
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "w_leader_trait_tactical_genius" }
+}
+
+w_leader_trait_tactical_genius = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		ship_weapon_range_mult = 0.15
+		ship_engagement_range_mult = 0.15
+		ship_accuracy_mult = 0.15
+		ship_evasion_mult = 0.15
+		ship_shield_penetration_mult = 0.15
+		ship_armor_penetration_mult = 0.15
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "w_leader_trait_tactictian" }
+}
+
+w_leader_trait_logistics_genius = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		ships_upkeep_mult = -0.25
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "w_leader_trait_fleet_logistican" }
+}
+
+w_leader_trait_fleet_logistican = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		ships_upkeep_mult = -0.15
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "w_leader_trait_logistics_genius" }
+}
+
+w_leader_trait_carrier_proffecient = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.10
+		weapon_type_strike_craft_weapon_fire_rate_mult = 0.10
+		weapon_type_strike_craft_speed_mult = 0.10
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "w_leader_trait_carrier_genius" }
+}
+
+
+
+################
+#Scientist 
+################
+
+w_leader_trait_true_genius = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		all_technology_research_speed = 0.25
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	#opposites = { "w_leader_trait_carrier_genius" }
+}
+
+
+#####
+#Creeper Traits
+#########
+
+#w_leader_trait_creeper_scientist = {
+#	cost = 1
+#	modification = no
+#	#icon goes here
+#	modifier = {
+#		all_technology_research_speed = 0.25
+#	}
+#	leader_trait = { scientist }
+#	leader_class = { scientist }
+#	#opposites = { "w_leader_trait_carrier_genius" }
+#}
+
+w_leader_trait_creeper_admiral = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		ship_disengage_chance_mult = -5
+		ship_fire_rate_mult = 0.25
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	#opposites = { "w_leader_trait_carrier_genius" }
+}
+
+###################
+# Govenor
+###################
+
+w_leader_trait_stalwart = {
+	cost = 1
+	modification = no
+	#icon goes here
+	modifier = {
+		army_defense_damage_mult = 1.00
+        pop_decline_speed = -0.50
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	#opposites = { "w_leader_trait_carrier_genius" }
+}

@@ -1,0 +1,806 @@
+tech_w_gas_warcrimes = {
+	icon = tech_exotic_gases
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	category = { industry }
+	prerequisites = { "tech_basic_industry" }
+	weight = @tier1weight1
+
+	gateway = infrastructure
+
+	modifier = {
+		army_damage_mult = 0.05
+		planet_jobs_exotic_gases_produces_mult = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_advanced_gas_warcrimes = {
+	icon = tech_exotic_gases
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { industry }
+	prerequisites = { "tech_exotic_gases" "tech_w_gas_warcrimes" }
+	weight = @tier2weight2
+	
+	gateway = infrastructure
+
+	modifier = {
+		army_damage_mult = 0.10
+		planet_jobs_exotic_gases_produces_mult = 0.15
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_standard_arms_manufactoring = {
+	icon = tech_basic_industry
+	cost = @tier1cost3
+	area = engineering
+	tier = 1
+	category = { industry }
+	prerequisites = { "tech_basic_industry" }
+	weight = @tier1weight1
+	
+	gateway = infrastructure
+
+	modifier = {
+		army_damage_mult = 0.10
+		planet_army_build_speed_mult = 0.0125
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_improved_arms_manufactoring = {
+	icon = tech_basic_industry
+	cost = @tier2cost3
+	area = engineering
+	tier = 2
+	category = { industry }
+	prerequisites = { "tech_w_standard_arms_manufactoring" }
+	weight = @tier2weight1
+	
+	modifier = {
+		army_damage_mult = 0.10
+		planet_army_build_speed_mult = 0.025
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_advanced_arms_manufactoring = {
+	icon = tech_basic_industry
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_w_improved_arms_manufactoring" }
+	weight = @tier3weight1
+	
+	modifier = {
+		army_damage_mult = 0.10
+		planet_army_build_speed_mult = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_galactic_arms_manufactoring = {
+	icon = tech_basic_industry
+	cost = @tier5cost2
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_w_advanced_arms_manufactoring" }
+	weight = @tier4weight3
+	
+	modifier = {
+		army_damage_mult = 0.10
+		planet_army_build_speed_mult = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_standard_ship_building = {
+	icon = tech_corvette_build_speed
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { voidcraft }
+	prerequisites = { "tech_basic_industry" }
+	weight = @tier1weight3
+	
+	gateway = ship
+	
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.015
+		starbase_shipyard_build_speed_mult = 0.015
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_improved_ship_building = {
+	icon = tech_destroyer_build_speed
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { voidcraft }
+	prerequisites = { "tech_w_standard_ship_building" }
+	weight = @tier2weight3
+	
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.015
+		starbase_shipyard_build_speed_mult = 0.015
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_advanced_ship_building = {
+	icon = tech_cruiser_build_speed
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_w_improved_ship_building" }
+	weight = @tier3weight3
+	
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.025
+		starbase_shipyard_build_speed_mult = 0.025
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_galactic_ship_building = {
+	icon = tech_battleship_build_speed
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_w_advanced_ship_building" }
+	weight = @tier4weight3
+	
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.05
+		starbase_shipyard_build_speed_mult = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_standard_ship_subsystems = {
+	icon = tech_refit_standards
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { voidcraft }
+	prerequisites = { "tech_basic_industry" }
+	weight = @tier1weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.0125
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_improved_ship_subsystems = {
+	icon = tech_refit_standards
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { voidcraft }
+	prerequisites = { "tech_w_standard_ship_subsystems" }
+	weight = @tier2weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.025
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_advanced_ship_subsystems = {
+	icon = tech_refit_standards
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_w_improved_ship_subsystems" }
+	weight = @tier3weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_galactic_ship_subsystems = {
+	icon = tech_refit_standards
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_w_advanced_ship_subsystems" }
+	weight = @tier4weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.1
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_space_elevator = {
+	icon = tech_basic_industry
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { industry }
+	prerequisites = { "tech_w_standard_ship_building" }
+	weight = @tier2weight2
+	gateway = infrastructure
+	
+	modifier = {
+		ships_upkeep_mult = -0.025
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_improved_space_elevator = {
+	icon = tech_basic_industry
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_w_space_elevator" }
+	weight = @tier3weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.025
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_advanced_space_elevator = {
+	icon = tech_basic_industry
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_w_improved_space_elevator" }
+	weight = @tier4weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_galactic_space_elevator = {
+	icon = tech_basic_industry
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_w_advanced_space_elevator" }
+	weight = @tier5weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_w_artillery = {
+	icon = tech_basic_industry
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { industry }
+	prerequisites = { "tech_w_standard_arms_manufactoring" }
+	weight = @tier1weight2
+	
+	modifier = {
+		army_damage_mult = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_heavy_artillery = {
+	icon = tech_basic_industry
+	cost = @tier3cost2
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_w_artillery" }
+	weight = @tier4weight2
+	
+	modifier = {
+		ships_upkeep_mult = -0.05
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_artillery_trenches = {
+	icon = tech_basic_industry
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { industry }
+	prerequisites = { "tech_w_artillery" "tech_w_trench_warfare" }
+	weight = @tier5weight2
+	
+	modifier = {
+		
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_w_heavy_artillery_trenches = {
+	icon = tech_basic_industry
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { industry }
+	prerequisites = { "tech_w_heavy_artillery" }
+	weight = @tier5weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}

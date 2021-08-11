@@ -1,0 +1,18 @@
+#this = country
+on_monthly_pulse_country = {
+	events = {
+		w_war_events.1# War Admirals recruited Gatekeeper
+		w_war_events.2# War Generals recruited Gatekeeper
+		w_war_events.3# Militarist WHERE THE FUCK IS THE WAR Gatekeeper
+		w_war_events.5# PACIFISM GO BRRRRRR Gatekeeper
+		w_war_events.6# Pacism at war is bad Gatekeeper
+		w_war_events.7# Militarism at war unity go bRRRRR Gatekeeper
+	}
+}
+
+on_entering_war = {
+	events = {
+		w_war_events.4 #militarist war outbreak
+		w_war_events.8# pacifist war outbreak
+	}
+}
