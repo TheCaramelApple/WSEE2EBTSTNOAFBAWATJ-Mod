@@ -1,0 +1,26 @@
+﻿l_english:
+#######################
+#Economy Buildings
+########################
+ building_w_warcrime_refinery:0 "Gas Weapon Refinery"
+ building_w_warcrime_refinery_desc:0 "A refinery dedicated to producing gas weapons for our armies."
+ building_w_warcrime_refinery_upgraded:0 "Improved Gas Weapon Refinery"
+ building_w_warcrime_refinery_upgraded_desc:0 "A refinery that has been made more efficient in its gas weapon production."
+ 
+ building_w_weapons_manufactorium:0 "Weapon Manufactory"
+ building_w_weapons_manufactorium_desc:0 "A weapons manufactory dedicated to producing all the required equipment for our armies."
+ building_w_weapons_manufactorium_improved:0 "Improved Weapon Manufactory"
+ building_w_weapons_manufactorium_improved_desc:0 "An improved weapons manufactory capable of producing enough basic equipment for multiple armies."
+ building_w_weapons_manufactorium_advanced:0 "Advanced Weapon Manufactory"
+ building_w_weapons_manufactorium_advanced_desc:0 "This highly advanced weapons manufactory is capable of producing enough guns and other supplies to supply a planets worth of armies."
+ building_w_weapons_manufactorium_galactic:0 "Galactic Weapon Manufactory"
+ building_w_weapons_manufactorium_galactic_desc:0 "This seemingly endless weapons manufactory is capabale of producing all the neccessary equipment for up to six worlds."
+ 
+ buidling_w_space_elevator:0 "Space Elevator"
+ buidling_w_space_elevator_desc:0 "A space elevator designed to allow easier transportation of supplies and equipment to orbit."
+ buidling_w_space_elevator_improved:0 "Improved Space Elevator"
+ buidling_w_space_elevator_improved_desc:0 "An improved space elevator capable of carrying larger and multiple loads of supplies and equipment to orbit."
+ buidling_w_space_elevator_advanced:0 "Advanced Space Elevator"
+ buidling_w_space_elevator_advanced_desc:0 "This advanced space elevator is capable of moving equipment not only to and from orbit but also around the star system."
+ buidling_w_space_elevator_galactic:0 "Galactic Scale Space Elevator"
+ buidling_w_space_elevator_galactic_desc:0 "Through means nobody is quite sure of this elevator is capabale of sending supplies across the galaxy."
