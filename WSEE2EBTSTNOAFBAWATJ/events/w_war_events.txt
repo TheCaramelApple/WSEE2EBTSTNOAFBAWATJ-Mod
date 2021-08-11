@@ -1,0 +1,365 @@
+namespace = w_war_events
+
+country_event = {
+	id = w_war_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	title = "w_war_events.1.name"
+	desc = "w_war_events.1.desc"
+	trigger = {
+		is_at_war = yes
+	}
+	
+	immediate = {
+		random_list = {
+			97 = {}
+			3 = {
+				country_event = {
+					id = w_war_events.1a
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = w_war_events.1a
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.1.name"
+	desc = "w_war_events.1.desc"
+	immediate = {
+		random_list = {
+			25 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = leader_trait_aggressive
+					}
+				}
+			}
+			25 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = w_leader_trait_carrier_genius
+					}
+				}
+			}
+			25 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = w_leader_trait_carrier_proffecient
+					}
+				}
+			}
+			25 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = w_leader_trait_tactictian
+					}
+				}
+			}
+		}
+	}
+	option = {name = EXCELLENT}
+}
+
+country_event = {
+	id = w_war_events.2
+	hide_window = yes
+	is_triggered_only = yes
+	title = "w_war_events.2.name"
+	desc = "w_war_events.2.desc"
+	trigger = {
+		is_at_war = yes
+	}
+	
+	immediate = {
+		random_list = {
+			97 = {}
+			3 = {
+				country_event = {
+					id = w_war_events.2a
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_war_events.2a
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.2.name"
+	desc = "w_war_events.2.desc"
+	immediate = {
+		random_list = {
+			25 = {
+				create_leader = {
+					class = general
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = leader_trait_charismatic 
+					}
+				}
+			}
+			25 = {
+				create_leader = {
+					class = general
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = leader_trait_glory_seeker  
+					}
+				}
+			}
+			25 = {
+				create_leader = {
+					class = general
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = leader_trait_butcher  
+					}
+				}
+			}
+			25 = {
+				create_leader = {
+					class = general
+					species = owner_main_species
+					name = random
+					skill = 2
+					traits = {
+						trait = leader_trait_general_erudite 
+					}
+				}
+			}
+		}
+	}
+	option = {name = EXCELLENT}
+}
+
+country_event = {
+	id = w_war_events.3
+	hide_window = yes
+	is_triggered_only = yes
+	title = "w_war_events.3.name"
+	desc = "w_war_events.3.desc"
+	trigger = {
+		AND = {
+			is_at_war = no
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			98 = {}
+			2 = {
+				country_event = {
+					id = w_war_events.3a
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_war_events.3a
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.3.name"
+	desc = "w_war_events.3.desc"
+	immediate = {
+		add_resource = {
+			unity = -500
+		}
+	}
+	option = {
+		name = WORRYING
+	}
+}
+
+country_event = {
+	id = w_war_events.4
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.4.name"
+	desc = "w_war_events.4.desc"
+	trigger = {
+		OR = {
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_militarist
+		}
+	}
+	immediate = {
+		add_resource = {
+			unity = 1000
+		}
+	}
+	option = { name = EXCELLENT }
+}
+
+country_event = {
+	id = w_war_events.5
+	hide_window = yes
+	is_triggered_only = yes
+	title = "w_war_events.5.name"
+	desc = "w_war_events.5.desc"
+	trigger = {
+		AND = {
+			is_at_war = no
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			98 = {}
+			2 = {
+				country_event = {
+					id = w_war_events.5a
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_war_events.5a
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.5.name"
+	desc = "w_war_events.5.desc"
+	immediate = {
+		add_resource = {
+			unity = 500
+		}
+	}
+	option = { name = EXCELLENT }
+}
+
+country_event = {
+	id = w_war_events.6
+	hide_window = yes
+	is_triggered_only = yes
+	title = "w_war_events.6.name"
+	desc = "w_war_events.6.desc"
+	trigger = {
+		AND = {
+			is_at_war = yes
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			98 = {}
+			2 = {
+				country_event = {
+					id = w_war_events.6a
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = w_war_events.6a
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.6.name"
+	desc = "w_war_events.6.desc"
+	immediate = {
+		add_resource = {
+			unity = -500
+		}
+	}
+	option = { name = WORRYING }
+}
+
+country_event = {
+	id = w_war_events.7
+	hide_window = yes
+	is_triggered_only = yes
+	title = "w_war_events.7.name"
+	desc = "w_war_events.7.desc"
+	trigger = {
+		AND = {
+			is_at_war = yes
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			98 = {}
+			2 = {
+				country_event = {
+					id = w_war_events.7a
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_war_events.7a
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.7.name"
+	desc = "w_war_events.7.desc"
+	immediate = {
+		add_resource = {
+			unity = 500
+		}
+	}
+	option = { name = EXCELLENT }
+}
+
+country_event = {
+	id = w_war_events.8
+	hide_window = no
+	is_triggered_only = yes
+	title = "w_war_events.8.name"
+	desc = "w_war_events.8.desc"
+	trigger = {
+		OR = {
+			has_ethic = ethic_fanatic_pacifist
+			has_ethic = ethic_pacifist
+		}
+	}
+	immediate = {
+		add_resource = {
+			unity = -1000
+		}
+	}
+	option = { name = WORRYING }
+}
