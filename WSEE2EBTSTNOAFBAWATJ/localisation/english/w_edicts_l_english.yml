@@ -1,0 +1,8 @@
+﻿l_english:
+l_english:
+########
+#Edicts#
+########
+
+ edict_forced_institutionalization: "Give Therapy"
+ edict_forced_institutionalization_desc: "Give all institutionalized persons free therapy"

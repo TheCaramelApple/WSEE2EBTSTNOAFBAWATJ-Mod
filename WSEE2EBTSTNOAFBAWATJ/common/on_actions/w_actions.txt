@@ -16,3 +16,7 @@ on_entering_war = {
 		w_war_events.8# pacifist war outbreak
 	}
 }
+
+#on_yearly_pulse_country = {
+#	w_assimilation_events.1
+#}

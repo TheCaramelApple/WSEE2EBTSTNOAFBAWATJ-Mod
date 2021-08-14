@@ -1,0 +1,39 @@
+institutionalized = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_sadistic
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_sadistic
+		}
+	}
+}

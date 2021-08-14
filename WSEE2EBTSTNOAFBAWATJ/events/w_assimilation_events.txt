@@ -1,0 +1,46 @@
+namespace = w_assimilation_events
+
+country_event = {
+    id = w_assimilation_events.1
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+	set_variable =  { 
+		which = counted_pops
+		value = 0
+	}
+        every_owned_pop = {
+            if = {
+                pop_has_ethic = ethic_sadistic
+            }
+            change_variable = {
+		        which = counted_pops
+		        value = 1
+	        }
+        }
+	    modifier = {
+	    	job_institutionalized_add = counted_pops
+    	}
+	    country_event = {
+	    	id = w_assimilation_events.2
+	    	months = 3
+	    }
+    }
+}
+
+country_event = {
+	id = w_assimilation_events.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+                limit = { has_ethic = ethic_sadistic }
+                clear_ethos = yes
+				pop_change_ethic = ethic_sane
+			    unemploy_pop = yes
+			}
+		}
+	}
+}
+			

@@ -1,0 +1,23 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_ethics_fanatic_sane"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_sane.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ethics_sane"
+		texturefile = "gfx/interface/icons/ethics/ethic_sane.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ethics_fanatic_sadistic"
+		texturefile = "gfx/interface/icons/ethics/ethic_fanatic_sadistic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ethics_sadistic"
+		texturefile = "gfx/interface/icons/ethics/ethic_sadistic.dds"
+	}
+}
+

@@ -1,0 +1,17 @@
+building_therapy = {
+    base_buildtime = @b1_time
+    base_cap_amount = 1
+    category = government
+
+    potential = {
+        owner = { 
+            OR = {
+                has_valid_civic = civic_forced_therapy
+                has_valid_civic = civic_therapy
+            }
+        }
+    }
+    planet_modifier = {
+        job_therapist_add = 2
+    }
+}

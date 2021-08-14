@@ -1,0 +1,8 @@
+﻿l_english:
+########
+#Civics#
+########
+ civic_forced_therapy:0 "Forced Therapy"
+ civic_forced_therapy_desc:0 "Citizens in this nation are reguarly voluntold to undergo extensive therapy, to make them fit the norm of society \n \n Gains access to §YTherapist Offices§! £w_tooltip_building£ building \n Gains access to edict §YForced Insitutionalization§! to shift the ethics of all pops that have the Sadistic ethic to Sane"
+ civic_therapy:0 "Institutionalized Therapy"
+ civic_therapy_desc:0 "This nation has a complex and thought out system of institutionalized therapy, where its citizens can recieve top-notch therapy in 3-4 buisness weeks \n \n Gains access to §YTherapist Offices§! £w_tooltip_building£ building"

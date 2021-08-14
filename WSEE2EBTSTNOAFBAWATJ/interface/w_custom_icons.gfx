@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+	name = "GFX_text_w_tooltip_building"
+	textureFile = "gfx/interface/icons/text_icons/tooltip_building.dds"
+	}
+}

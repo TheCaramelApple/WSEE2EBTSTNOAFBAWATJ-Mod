@@ -1,0 +1,125 @@
+ethic_fanatic_sane = {
+	cost = 2
+	category = "san"
+	category_value = 0
+
+	use_for_pops = no
+
+	regular_variant = ethic_Sane
+
+	country_modifier = {}
+
+	tags = {}
+
+	random_weight = { value = 150 }
+}
+
+ethic_sane = {
+	cost = 1
+	category = "san"
+	category_value = 1
+
+	fanatic_variant = ethic_fanatic_Sane
+
+	country_modifier = {}
+
+	tags = {}
+
+	pop_attraction_tag = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_sane
+				has_ethic = ethic_fanatic_sane
+			}
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_sane
+				has_ethic = ethic_fanatic_sane 
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_sane
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_sane
+		}
+	}
+
+	pop_attraction = {
+		value = 1
+	}
+
+	random_weight = { value = 100 }
+}
+
+ethic_fanatic_sadistic = {
+	cost = 2
+	category = "san"
+	category_value = 0
+
+	use_for_pops = no
+
+	regular_variant = ethic_sadistic
+
+	country_modifier = {}
+
+	tags = {}
+
+	random_weight = { value = 150 }
+}
+
+ethic_sadistic = {
+	cost = 1
+	category = "san"
+	category_value = 1
+
+	fanatic_variant = ethic_fanatic_sadistic
+
+	country_modifier = {}
+
+	tags = {}
+
+	pop_attraction_tag = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_sadistic
+				has_ethic = ethic_fanatic_sadistic
+			}
+		}
+	}
+	
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_sadistic
+				has_ethic = ethic_fanatic_sadistic 
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_sadistic
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_sadistic
+		}
+	}
+
+	pop_attraction = {
+		value = 1
+	}
+
+	random_weight = { value = 100 }
+}
