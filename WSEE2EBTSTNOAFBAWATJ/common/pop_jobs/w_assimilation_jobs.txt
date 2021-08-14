@@ -27,6 +27,9 @@ institutionalized = {
 			}
 			minerals = 0.5
 		}
+		produces = {
+			menace = 1
+		}
 	}
 	
 	weight = {
