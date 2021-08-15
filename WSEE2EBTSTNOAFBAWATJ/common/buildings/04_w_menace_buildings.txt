@@ -16,7 +16,7 @@ building_w_corruptor_1 = {
         "tech_w_corruption_theory"
     }
     upgrades = {
-        building_corruptor_2
+        building_w_corruptor_2
     }
     planet_modifier = {
         job_corruptor_add = 2
@@ -25,6 +25,7 @@ building_w_corruptor_1 = {
 
 building_w_corruptor_2 = {
     base_buildtime = @b2_time
+    can_build = no
     category = manufacturing
     resources = {
         cost = {

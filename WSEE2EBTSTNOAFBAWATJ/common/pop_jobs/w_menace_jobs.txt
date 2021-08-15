@@ -8,4 +8,7 @@ corruptor = {
             menace = 5
         }
     }
+    weight = {
+        weight = @specialist_job_weight
+    }
 }
