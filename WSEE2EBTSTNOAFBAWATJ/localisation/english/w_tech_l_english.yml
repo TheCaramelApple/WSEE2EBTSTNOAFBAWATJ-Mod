@@ -98,3 +98,12 @@
  tech_w_mage_soldiers_desc:0 "By empolying psionic mages in our regular armies we can drasticaly increase their firepower with little material loss."
  tech_w_elite_mage_armies:0 "Mage Armies"
  tech_w_elite_mage_armies_desc:0 "By deploying entire armies made of psionic mages we can crush enemy resisitance in record speeds."
+
+###################
+#Phys Tech
+###########
+
+ tech_w_corruption_theory:0 "Corruption Theory"
+ tech_w_corruption_theory_desc:0 "Our lead scientists have theorized a substance of extra-physical properties, coined as corruption."
+ tech_w_applied_corruption:0 "Applied Corruption"
+ tech_w_applied_corruption_desc:0 "Our scientists have figured out how to produce corruption at higher rates"

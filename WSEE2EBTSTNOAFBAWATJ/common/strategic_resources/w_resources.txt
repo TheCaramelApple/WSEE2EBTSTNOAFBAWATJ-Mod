@@ -1,0 +1,7 @@
+corruption = {
+    tradeable = no
+
+    ai_weight = {
+        weight = 1
+    }
+}

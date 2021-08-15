@@ -7,3 +7,7 @@ l_english:
  job_institutionalized: "Institutionalized"
  job_institutionalized_plural: "Institutionalized Persons"
  mod_job_institutionalized_add: "Institutionalized Persons"
+ 
+ job_corruptor: "Corruptor"
+ job_corruptor_plural: "Corruptors"
+ mod_job_corruptor_add: "Corruptors"

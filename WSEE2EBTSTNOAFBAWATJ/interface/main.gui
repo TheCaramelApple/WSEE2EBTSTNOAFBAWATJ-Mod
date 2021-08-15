@@ -685,7 +685,7 @@ guiTypes = {
 					name = "expanded_window"
 					hide_position = { x = 0 y = -190 }
 					show_position = { x = 0 y = 36 }
-					size = { width = 100 height = 200 }
+					size = { width = 100 height = 230 } #add 30 for every added resource
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
 					animation_time = 200

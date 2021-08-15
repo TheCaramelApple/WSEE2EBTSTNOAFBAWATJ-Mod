@@ -1,0 +1,11 @@
+corruptor = {
+    category = specialist
+    resources = {
+        produces = {
+            corruption = 1
+        }
+        upkeep = {
+            menace = 5
+        }
+    }
+}

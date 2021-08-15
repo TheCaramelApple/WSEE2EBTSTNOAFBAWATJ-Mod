@@ -8,6 +8,7 @@ tb_others_group = {
 		sr_dark_matter
 		nanites
         menace
+		corruption
 	}
 	localization = {
 		"RESOURCE_GROUP_DEFAULT" = default

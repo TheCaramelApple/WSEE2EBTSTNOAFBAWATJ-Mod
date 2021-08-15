@@ -1,0 +1,82 @@
+tech_w_corruption_theory = {
+    cost = @tier1cost1
+    area = physics
+    tier = 1
+    category = { field_manipulation }
+    prerequisites = {
+        tech_wormhole_stabilization
+        tech_physics_lab_1
+    }
+    weight_modifier = {
+        factor = 0.75
+		modifier = {
+			factor = 1.5
+            OR = {
+                has_ethic = ethic_sadistic
+                has_ethic = ethic_fanatic_sadistic
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_manaical"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_technology = tech_psionic_theory
+        }
+	}
+    ai_weight = {
+        factor = 5 #rare tech
+        modifier = {
+			factor = 1.5
+            OR = {
+                has_ethic = ethic_sadistic
+                has_ethic = ethic_fanatic_sadistic
+            }
+        }
+    }
+}
+
+tech_w_applied_corruption = {
+    cost = @tier2cost1
+    area = physics
+    tier = 1
+    category = { field_manipulation }
+    prerequisites = {
+        tech_w_corruption_theory
+    }
+    weight_modifier = {
+        factor = 1
+		modifier = {
+			factor = 1.5
+            OR = {
+                has_ethic = ethic_sadistic
+                has_ethic = ethic_fanatic_sadistic
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_manaical"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_technology = tech_psionic_theory
+        }
+    }
+    ai_weight = {
+        factor = 5 #rare tech
+        modifier = {
+			factor = 1.5
+            OR = {
+                has_ethic = ethic_sadistic
+                has_ethic = ethic_fanatic_sadistic
+            }
+        }
+    }
+}
