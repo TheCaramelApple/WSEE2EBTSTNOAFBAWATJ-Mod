@@ -11,7 +11,7 @@ ethic_fanatic_sane = {
 
 	tags = {}
 
-	random_weight = { value = 150 }
+	random_weight = { value = 1 }
 }
 
 ethic_sane = {
@@ -58,7 +58,7 @@ ethic_sane = {
 		value = 1
 	}
 
-	random_weight = { value = 100 }
+	random_weight = { value = 1 }
 }
 
 ethic_fanatic_sadistic = {
@@ -74,7 +74,7 @@ ethic_fanatic_sadistic = {
 
 	tags = {}
 
-	random_weight = { value = 150 }
+	random_weight = { value = 1 }
 }
 
 ethic_sadistic = {
@@ -121,5 +121,5 @@ ethic_sadistic = {
 		value = 1
 	}
 
-	random_weight = { value = 100 }
+	random_weight = { value = 1 }
 }

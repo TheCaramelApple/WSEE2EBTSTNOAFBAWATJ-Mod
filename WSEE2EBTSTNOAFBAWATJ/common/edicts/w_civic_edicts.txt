@@ -14,3 +14,20 @@ forced_institutionalization = {
     }
     
 }
+
+round_up_sadistics = {
+    length = 0
+    resources = {
+        category = edicts
+        cost = {
+            influence = 250
+        }
+    }
+    effect = {
+        country_event = { id = w_assimilation_events.3 }
+    }
+    potential = {
+        has_valid_civic = civic_forced_therapy
+    }
+    
+}

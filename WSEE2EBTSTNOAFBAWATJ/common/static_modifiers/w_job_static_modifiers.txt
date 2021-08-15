@@ -1,0 +1,3 @@
+w_add_institutionalized = {
+    job_institutionalized_add = 200
+}

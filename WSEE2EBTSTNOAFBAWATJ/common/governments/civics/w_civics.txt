@@ -32,7 +32,4 @@ civic_forced_therapy = {
             }
         }
     }
-    modifier = {
-	job_institutionalized_per_pop = 1
-    }
 }
