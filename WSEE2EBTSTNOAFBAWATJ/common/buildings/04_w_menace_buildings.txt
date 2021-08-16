@@ -46,3 +46,25 @@ building_w_corruptor_2 = {
         pop_happiness = -0.05
     }
 }
+
+building_w_alloy_corruptor = {
+    base_buildtime = @b2_time
+    category = manufacturing
+    resources = {
+        cost = {
+            menace = 200
+            minerals = 300
+            alloys = 100
+        }
+        upkeep = {
+            menace = 1
+            energy = 2
+        }
+    }
+    prerequisites = {
+        "tech_w_corrupted_alloys"
+    }
+    planet_modifier = {
+         job_alloy_corruptor_add = 2
+    }
+}

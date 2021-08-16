@@ -1,7 +1,21 @@
 corruption = {
-    tradeable = no
-
+    tradable = no
+    deficit_modifier = w_corruption_deficit
     ai_weight = {
         weight = 1
+    }
+}
+
+corrupted_alloys = {
+    max = 15000
+    deficit_modifier = alloys_deficit
+    market_amount = 25
+    market_price = 200
+    
+    ai_weight = {
+        base = 5
+    }
+    ai_wants = {
+        base = 600
     }
 }

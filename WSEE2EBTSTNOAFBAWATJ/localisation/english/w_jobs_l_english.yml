@@ -11,3 +11,7 @@ l_english:
  job_corruptor: "Corruptor"
  job_corruptor_plural: "Corruptors"
  mod_job_corruptor_add: "Corruptors"
+
+ job_alloy_corruptor: "Alloy Corruptor"
+ job_alloy_corruptor_plural: "Alloy Corruptors"
+ mod_job_alloy_corruptor_add: "Alloy Coruptors"

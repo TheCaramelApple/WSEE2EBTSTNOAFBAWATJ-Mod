@@ -1,11 +1,28 @@
 corruptor = {
     category = specialist
     resources = {
+        category = pop_jobs
         produces = {
             corruption = 1
         }
         upkeep = {
             menace = 5
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+    }
+}
+
+alloy_corruptor = {
+    category = specialist
+    resources = {
+        produces = {
+            corrupted_alloys = 4
+        }
+        upkeep = {
+            corruption = 1
+            alloys = 5
         }
     }
     weight = {

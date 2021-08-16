@@ -7,8 +7,9 @@ sectors_others_group = {
 		sr_zro
 		sr_dark_matter
 		nanites
-        menace
-        corruption
+                menace
+		corruption
+                corrupted_alloys
 	}
 	localization = {
 		"RESOURCE_GROUP_BALANCE_ONLY" = default

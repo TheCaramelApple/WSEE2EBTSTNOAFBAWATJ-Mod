@@ -1,0 +1,8 @@
+﻿l_english:
+##################
+#Resources
+##############
+ corruption:0 "Corruption"
+ corruption_desc:0 "An extra-physical material with mysterious properties"
+ corrupted_alloys:0 "Corrupted Alloys"
+ corrupted_alloys_desc:0 "Alloys tainted with corruption"

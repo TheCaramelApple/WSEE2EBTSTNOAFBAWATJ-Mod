@@ -804,3 +804,13 @@ tech_w_heavy_artillery_trenches = {
 		}
 	}
 }
+
+tech_w_corrupted_alloys = {
+	cost = @tier1cost1
+	area = engineering
+	weight = @tier1weight3
+	category = { industry }
+	prerequisites = {
+		tech_w_corruption_theory
+	}
+}
