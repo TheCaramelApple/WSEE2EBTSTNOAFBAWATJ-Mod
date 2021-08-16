@@ -34,6 +34,7 @@ building_w_corruptor_2 = {
             alloys = 300
         }
         upkeep = {
+            exotic_gases = 1
             menace = 2
             energy = 6
         }
@@ -58,7 +59,8 @@ building_w_alloy_corruptor = {
         }
         upkeep = {
             menace = 1
-            energy = 2
+            energy = 4
+            volatile_motes = 1
         }
     }
     prerequisites = {
