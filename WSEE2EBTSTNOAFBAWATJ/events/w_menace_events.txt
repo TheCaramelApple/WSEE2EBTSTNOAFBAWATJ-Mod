@@ -1,0 +1,40 @@
+namespace = w_menace_events
+
+country_event = {
+    id = w_menace_events.1
+    hide_window = no
+    is_triggered_only = yes
+    title = "w_menace_events.1.name"
+    picture = GFX_evt_spy_network
+    trigger = {
+        has_technology = tech_w_corruption_theory
+        has_resource = {
+            type = corruption
+            amount > 1000
+        }
+        owner = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    desc = {
+        text = w_menace_events.1.desc
+    }
+    immediate = {
+        random_list = {
+            25 = {
+                add_modifier = {
+                    modifier = w_dread
+                    months = 12
+                }
+            }
+            75 = {
+
+            }
+        }
+    }
+    option = {
+        name = WORRYING
+    }
+}

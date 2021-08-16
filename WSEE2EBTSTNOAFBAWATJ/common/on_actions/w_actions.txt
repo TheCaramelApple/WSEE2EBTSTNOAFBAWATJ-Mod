@@ -17,6 +17,8 @@ on_entering_war = {
 	}
 }
 
-#on_yearly_pulse_country = {
-#	w_assimilation_events.1
-#}
+on_yearly_pulse_country = {
+	events = {
+		w_menace_events.1
+	}
+}
