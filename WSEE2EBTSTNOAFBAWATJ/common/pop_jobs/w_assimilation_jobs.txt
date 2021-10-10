@@ -1,4 +1,4 @@
-institutionalized = {
+institutionalized_sadistics = {
 	category = assimilation
 	is_capped_by_modifier = yes
 	clothes_texture_index = 2
@@ -37,6 +37,393 @@ institutionalized = {
 		modifier = {
 			factor = 1000000
 			has_ethic = ethic_sadistic
+		}
+	}
+}
+
+institutionalized_sanes = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_sane
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_sane
+		}
+	}
+}
+
+institutionalized_spiritualists = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_spiritualist
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_spiritualist
+		}
+	}
+}
+
+institutionalized_materialists = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_materialist
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_materialist
+		}
+	}
+}
+
+institutionalized_egalitarians = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_egalitarian
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_egalitarian
+		}
+	}
+}
+
+institutionalized_authoritarians = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_authoritarian
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_authoritarian
+		}
+	}
+}
+
+institutionalized_xenophiles = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_xenophile
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_xenophile
+		}
+	}
+}
+
+institutionalized_xenophobes = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_xenophobe
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_xenophobe
+		}
+	}
+}
+
+institutionalized_militarists = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_militarist
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_militarist
+		}
+	}
+}
+
+institutionalized_pacifists = {
+	category = assimilation
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_sapient = yes
+	}
+
+	ignores_sapience = yes
+	
+	possible  ={
+		has_ethic = ethic_pacifist
+	}
+	
+	resources = {
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			food = 0.5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 0.5
+		}
+		produces = {
+			menace = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 1000000
+			has_ethic = ethic_pacifist
 		}
 	}
 }

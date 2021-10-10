@@ -3,6 +3,6 @@
 #Civics#
 ########
  civic_forced_therapy:0 "Forced Therapy"
- civic_forced_therapy_desc:0 "Citizens in this nation are reguarly voluntold to undergo extensive therapy, to make them fit the norm of society \n \n\Gains access to §YTherapist Offices§! £w_tooltip_building£ building \nGains access to edict §YForced Insitutionalization§! to shift the ethics of all pops that have the Sadistic ethic to Sane \nGains access to edict §YRound Up Sadistics§! to institutionalize all sadistic pops"
+ civic_forced_therapy_desc:0 "Citizens in this nation are reguarly voluntold to undergo extensive therapy, to make them fit the norm of society \n\nGains access to §YTherapist Offices§! £w_tooltip_building£ building \n\nGains access to edict §YForced Insitutionalization§! to shift the ethics of pops of any ethic to any other ethic \n\nGains access to edict §YRound Up Deviants§! to institutionalize deviant pops"
  civic_therapy:0 "Institutionalized Therapy"
  civic_therapy_desc:0 "This nation has a complex and thought out system of institutionalized therapy, where its citizens can recieve top-notch therapy in 3-4 buisness weeks \n \nGains access to §YTherapist Offices§! £w_tooltip_building£ building"

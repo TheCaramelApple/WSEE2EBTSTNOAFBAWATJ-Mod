@@ -1,3 +1,40 @@
-w_add_institutionalized = {
-    job_institutionalized_add = 200
+w_add_institutionalized_sadistics = {
+    job_institutionalized_sadistics_add = 200
 }
+
+w_add_institutionalized_sanes = {
+    job_institutionalized_sanes_add = 200
+}
+
+w_add_institutionalized_spiritualists = {
+    job_institutionalized_spiritualists_add = 200
+}
+
+w_add_institutionalized_materialists = {
+    job_institutionalized_materialists_add = 200
+}
+
+w_add_institutionalized_egalitarians = {
+    job_institutionalized_egalitarians_add = 200
+}
+
+w_add_institutionalized_authoritarians = {
+    job_institutionalized_authoritarians_add = 200
+}
+
+w_add_institutionalized_xenophiles = {
+    job_institutionalized_xenophiles_add = 200
+}
+
+w_add_institutionalized_xenophobes = {
+    job_institutionalized_xenophobes_add = 200
+}
+
+w_add_institutionalized_militarists = {
+    job_institutionalized_militarists_add = 200
+}
+
+w_add_institutionalized_pacifists = {
+    job_institutionalized_pacifists_add = 200
+}
+

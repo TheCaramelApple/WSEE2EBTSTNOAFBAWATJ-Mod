@@ -6,5 +6,5 @@ l_english:
 
  edict_forced_institutionalization: "Give Therapy"
  edict_forced_institutionalization_desc: "Give all institutionalized persons free therapy \n\n§RWARNING:§! this edict will only have an effect after edict §YRound Up Sadistics§! is activated. After this edict is activated, edict §YRound Up Sadistics§! will have to be activated again."
- edict_round_up_sadistics: "Round Up Sadistics"
- edict_round_up_sadistics_desc: "Round Up and Institutionalize all sadistic persons"
+ edict_round_up_sadistics: "Round up Deviants"
+ edict_round_up_sadistics_desc: "Round up and institutionalize deviant persons \n\n§WARNING:§! it will take some time before the deviants are institutionalized, do not activate the edict §YGive Therapy§! until all deviants are institutionalized, or they will not be accounted for."

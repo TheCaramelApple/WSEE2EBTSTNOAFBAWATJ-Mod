@@ -20,6 +20,36 @@
  w_war_events.8.name:0 "Our People Protest"
  w_war_events.8.desc:0 "Our people are protesting due to our involvement in the war."
 
+########################
+#Assimilation Events
+#####################
+
+ w_assimilation_events.1.name:0 "Round up Deviants"
+ w_assimilation_events.1.desc:0 "The order has been given to round up deviants. Which ethos should we institutionalize?"
+ w_assimilation_events.1.a:0 "Sadistics"
+ w_assimilation_events.1.b:0 "The Sane"
+ w_assimilation_events.1.c:0 "Spiritualists"
+ w_assimilation_events.1.d:0 "Materialists"
+ w_assimilation_events.1.e:0 "Egalitarians"
+ w_assimilation_events.1.f:0 "Authoritarians"
+ w_assimilation_events.1.g:0 "Xenophiles"
+ w_assimilation_events.1.h:0 "Xenophobes" 
+ w_assimilation_events.1.i:0 "Militarists"
+ w_assimilation_events.1.j:0 "Pacifists"
+
+ w_assimilation_events.12.name:0 "Change Institutionalized Persons into..."
+ w_assimilation_events.12.desc:0 "The time has come to give therapy to the institutionalized. What ethos should we turn them into?"
+ w_assimilation_events.12.a:0 "Sadistic"
+ w_assimilation_events.12.b:0 "Sane"
+ w_assimilation_events.12.c:0 "Spiritualist"
+ w_assimilation_events.12.d:0 "Materialist"
+ w_assimilation_events.12.e:0 "Egalitarian"
+ w_assimilation_events.12.f:0 "Authoritarian"
+ w_assimilation_events.12.g:0 "Xenophile"
+ w_assimilation_events.12.h:0 "Xenophobe" 
+ w_assimilation_events.12.i:0 "Militarist"
+ w_assimilation_events.12.j:0 "Pacifist"
+
 ##############
 #Menace Events
 ###############
@@ -28,9 +58,12 @@
  w_menace_events.2.desc:0 "Across our empire, a looming sense of dread sets in..."
  w_menace_events.4.name:0 "Social Chaos"
  w_menace_events.4.desc:0 "Across our empire, social instability spreads"
- w_menace_events.3.a:0 "Unsettling"
+ w_menace_events.4.a:0 "Unsettling"
  w_menace_events.6.name:0 "Light has mass?!?"
- w_menace_events.6.desc:0 "For some reason our calculations have shown that light in out nation appears to have mass, fortunately this doesn't have catastrophic consequences."
+ w_menace_events.6.desc:0 "For some reason our calculations have shown that light in our nation appears to have mass, fortunately this doesn't have catastrophic consequences."
  w_menace_events.6.a:0 "What?"
- w_menace_events.7.name:0 "Energy Beast"
+ w_menace_events.7.name:0 "Energy Beast!"
  w_menace_events.7.desc:0 "A beast made of pure energy of unknown origins has suddenly appeared in our borders, best course of action is complete destruction of the entity."
+ w_menace_events.8.name:0 "Energy Beasts!"
+ w_menace_events.8.desc:0 "Multiple beasts made of pure energy of unknown origins have suddenly appeared in our borders, best course of action is complete destruction of the entities."
+ w_menace_events.8.a:0 "They must be stopped!"

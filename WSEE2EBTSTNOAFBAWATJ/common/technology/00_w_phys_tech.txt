@@ -1,7 +1,7 @@
 tech_w_corruption_theory = {
     cost = @tier1cost1
     area = physics
-    tier = 1
+    tier = 3
     category = { field_manipulation }
     prerequisites = {
         tech_wormhole_stabilization
@@ -43,7 +43,7 @@ tech_w_corruption_theory = {
 tech_w_applied_corruption = {
     cost = @tier2cost1
     area = physics
-    tier = 1
+    tier = 3
     category = { field_manipulation }
     prerequisites = {
         tech_w_corruption_theory

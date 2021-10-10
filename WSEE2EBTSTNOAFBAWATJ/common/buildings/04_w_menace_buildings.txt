@@ -2,6 +2,7 @@ building_w_corruptor_1 = {
     base_buildtime = @b1_time
     category = manufacturing
     resources = {
+        category = planet_buildings
         cost = {
             menace = 500
             minerals = 200
@@ -28,6 +29,7 @@ building_w_corruptor_2 = {
     can_build = no
     category = manufacturing
     resources = {
+        category = planet_buildings
         cost = {
             menace = 1000
             minerals = 300
@@ -44,7 +46,7 @@ building_w_corruptor_2 = {
     }
     planet_modifier = {
         job_corruptor_add = 4
-        pop_happiness = -0.05
+        pop_happiness = -0.02
     }
 }
 
@@ -52,6 +54,7 @@ building_w_alloy_corruptor = {
     base_buildtime = @b2_time
     category = manufacturing
     resources = {
+        category = planet_buildings
         cost = {
             menace = 200
             minerals = 300

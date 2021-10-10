@@ -2,27 +2,1092 @@ namespace = w_assimilation_events
 
 country_event = {
     id = w_assimilation_events.1
-    hide_window = yes
     is_triggered_only = yes
-    immediate = {
-	set_variable =  { 
-		which = counted_pops
-		value = 0
+	title = "w_assimilation_events.1.name"
+	picture = GFX_evt_cover_blown
+	desc = {
+		text = w_assimilation_events.1.desc
 	}
-        every_owned_pop = {
-            if = {
-                pop_has_ethic = ethic_sadistic
-            }
-            change_variable = {
-		        which = counted_pops
-		        value = 1
-	        }
-        }
-	    country_event = {
-	    	id = w_assimilation_events.2
-	    	months = 3
-	    }
-    }
+	option = {
+		name = "w_assimilation_events.1.a"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.2
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.b"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.3
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.c"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.4
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.d"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.5
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.e"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.6
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.f"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.7
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.g"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.8
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.h"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.9
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.i"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.10
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.1.j"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.11
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.12
+	is_triggered_only = yes
+	title = "w_assimilation_events.12.name"
+	picture = GFX_evt_salute
+	desc = {
+		text = w_assimilation_events.12.desc
+	}
+	option = {
+		name = "w_assimilation_events.12.a"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.13
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.b"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.14
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.c"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.15
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.d"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.16
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.e"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.17
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.f"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.18
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.g"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.19
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.h"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.20
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.i"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.21
+			}
+		}
+	}
+	option = {
+		name = "w_assimilation_events.12.j"
+		hidden_effect = {
+			country_event = {
+				id = w_assimilation_events.22
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.13
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_sadistic
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.14
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_sane
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.15
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_spiritualist
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.16
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_materialist
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.17
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_egalitarian
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.18
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_authoritarian
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.19
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_xenophile
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.20
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_xenophobe
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.21
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_militarist
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.22
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					OR = {
+						has_job = institutionalized_sadistics
+						has_job = institutionalized_sanes
+						has_job = institutionalized_spiritualists
+						has_job = institutionalized_materialists
+						has_job = institutionalized_egalitarians
+						has_job = institutionalized_authoritarians
+						has_job = institutionalized_xenophobes
+						has_job = institutionalized_xenophiles
+						has_job = institutionalized_militarists
+						has_job = institutionalized_pacifists
+					}
+				}
+				clear_ethos = yes
+				pop_change_ethic = ethic_pacifist
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sadistics"
+				}
+				remove_modifier = "w_add_institutionalized_sadistics"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_sanes"
+				}
+				remove_modifier = "w_add_institutionalized_sanes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+				remove_modifier = "w_add_institutionalized_spiritualists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+				remove_modifier = "w_add_institutionalized_materialists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+				remove_modifier = "w_add_institutionalized_egalitarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+				remove_modifier = "w_add_institutionalized_authoritarians"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+				remove_modifier = "w_add_institutionalized_xenophiles"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+				remove_modifier = "w_add_institutionalized_xenophobes"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+				remove_modifier = "w_add_institutionalized_militarists"
+			}
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifists"
+				}
+				remove_modifier = "w_add_institutionalized_pacifists"
+			}
+		}
+	}
 }
 
 country_event = {
@@ -30,47 +1095,29 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		set_variable =  { 
-			which = counted_pops3
-			value = 0
-		}
 		every_owned_pop = {
 			if = {
-                limit = { 
+				limit = { 
 					has_ethic = ethic_sadistic
-					has_job = institutionalized
+					NOT = {
+						has_job = institutionalized_sadistics
+					}
 				}
-				change_variable = {
-					which = counted_pops3
-					value = 1
-				}
-                clear_ethos = yes
-				pop_change_ethic = ethic_sane
-			    unemploy_pop = yes
+				unemploy_pop = yes
 			}
-		}
-		multiply_variable = {
-			which = counted_pops3
-			value = 5
-		}
-		set_variable = {
-			which = unityAmount
-			value = counted_pops3
-		}
-		multiply_variable = {
-			which = unityAmount
-			value = 2
-		}
-		add_resource = {
-			menace = counted_pops3
-			unity = unityAmount
 		}
 		every_owned_planet = {
 			if = {
 				limit = {
-					has_modifier = "w_add_institutionalized"
+					has_modifier = "w_add_institutionalized_sadistics"
 				}
-				remove_modifier = "w_add_institutionalized"
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_sadistics"
+					days = -1
+					clear_on_owner_change = yes
+				}
 			}
 		}
 	}
@@ -84,35 +1131,288 @@ country_event = {
 		every_owned_pop = {
 			if = {
 				limit = { 
-					has_ethic = ethic_sadistic
+					has_ethic = ethic_sane
 					NOT = {
-						has_job = institutionalized
+						has_job = institutionalized_sadistics
 					}
 				}
 				unemploy_pop = yes
 			}
 		}
 		every_owned_planet = {
-			set_variable = {
-				which = counted_pops2
-				value = 0
-			}
-			every_owned_pop = {
-				change_variable = {
-					which = counted_pops2
-					value = 1
-				}
-			}
-			if {
+			if = {
 				limit = {
-					has_modifier = "w_add_institutionalized"
+					has_modifier = "w_add_institutionalized_sadistics"
 				}
 			}
 			else = {
 				add_modifier = {
-					modifier = "w_add_institutionalized"
+					modifier = "w_add_institutionalized_sadistics"
 					days = -1
-					#multiplier = counted_pops2
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_spiritualist
+					NOT = {
+						has_job = institutionalized_spiritualists
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_spiritualists"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_spiritualists"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_materialist
+					NOT = {
+						has_job = institutionalized_materialists
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_materialists"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_materialists"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_egalitarian
+					NOT = {
+						has_job = institutionalized_egalitarians
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_egalitarians"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_egalitarians"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.7
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_authoritarian
+					NOT = {
+						has_job = institutionalized_authoritarians
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_authoritarians"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_authoritarians"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.8
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_xenophile
+					NOT = {
+						has_job = institutionalized_xenophiles
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophiles"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_xenophiles"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.9
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_xenophobe
+					NOT = {
+						has_job = institutionalized_xenophobes
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_xenophobes"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_xenophobes"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_militarist
+					NOT = {
+						has_job = institutionalized_militarists
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_militarists"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_militarists"
+					days = -1
+					clear_on_owner_change = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = w_assimilation_events.11
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = { 
+					has_ethic = ethic_pacifist
+					NOT = {
+						has_job = institutionalized_pacifists
+					}
+				}
+				unemploy_pop = yes
+			}
+		}
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_modifier = "w_add_institutionalized_pacifistss"
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = "w_add_institutionalized_pacifistss"
+					days = -1
 					clear_on_owner_change = yes
 				}
 			}

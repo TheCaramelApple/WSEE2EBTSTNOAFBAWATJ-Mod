@@ -4,7 +4,7 @@ w_dread = {
 
 w_social_instability = {
     pop_happiness = -0.07
-    planet_stability_add = -0.05
+    planet_stability_add = -5
 }
 
 w_slower_energy_weapons = {

@@ -18,10 +18,6 @@ civic_forced_therapy = {
     possible = {
         ethics = {
             OR = {
-                value = ethic_fanatic_sane
-                value = ethic_sane
-            }
-            OR = {
                 value = ethic_authoritarian
                 value = ethic_fanatic_authoritarian
             }
