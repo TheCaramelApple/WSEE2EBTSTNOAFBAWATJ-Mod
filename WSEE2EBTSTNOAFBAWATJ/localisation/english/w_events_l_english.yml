@@ -24,5 +24,13 @@
 #Menace Events
 ###############
 
- w_menace_events.1a.name:0 "A Sense of Dread"
- w_menace_events.1a.desc:0 "Across our empire, a looming sense of dread sets in..."
+ w_menace_events.2.name:0 "A Sense of Dread"
+ w_menace_events.2.desc:0 "Across our empire, a looming sense of dread sets in..."
+ w_menace_events.4.name:0 "Social Chaos"
+ w_menace_events.4.desc:0 "Across our empire, social instability spreads"
+ w_menace_events.3.a:0 "Unsettling"
+ w_menace_events.6.name:0 "Light has mass?!?"
+ w_menace_events.6.desc:0 "For some reason our calculations have shown that light in out nation appears to have mass, fortunately this doesn't have catastrophic consequences."
+ w_menace_events.6.a:0 "What?"
+ w_menace_events.7.name:0 "Energy Beast"
+ w_menace_events.7.desc:0 "A beast made of pure energy of unknown origins has suddenly appeared in our borders, best course of action is complete destruction of the entity."

@@ -1,3 +1,12 @@
 w_dread = {
     pop_happiness = -0.05
 }
+
+w_social_instability = {
+    pop_happiness = -0.07
+    planet_stability_add = -0.05
+}
+
+w_slower_energy_weapons = {
+    weapon_type_energy_weapon_fire_rate_mult = -0.8
+}

@@ -20,5 +20,6 @@ on_entering_war = {
 on_yearly_pulse_country = {
 	events = {
 		w_menace_events.1
+		w_menace_events.2
 	}
 }

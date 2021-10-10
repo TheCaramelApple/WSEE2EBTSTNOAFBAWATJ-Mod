@@ -1,15 +1,18 @@
 namespace = w_menace_events
 
-country_event = {
+country_event = { # Hidden
     id = w_menace_events.1
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        has_technology = tech_w_corruption_theory
-        has_resource = { type = corruption amount > 1000 }
-        owner = {
-            NOT = {
-                has_ethic = ethic_gestalt_consciousness
+        AND = {
+            has_technology = tech_w_corruption_theory
+            has_resource = { type = corruption amount > 999 }
+            has_resource = { type = corruption amount < 3001 }
+            owner = {
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
             }
         }
     }
@@ -28,10 +31,10 @@ country_event = {
 country_event = {
     id = w_menace_events.2
     is_triggered_only = yes
-    title = "w_menace_events.1a.name"
+    title = "w_menace_events.2.name"
     picture = GFX_evt_spy_network
     desc = {
-        text = w_menace_events.1a.desc
+        text = w_menace_events.2.desc
     }
     immediate = {
         add_modifier = {
@@ -42,4 +45,154 @@ country_event = {
     option = {
         name = WORRYING
     }
-}	
+}
+
+country_event = { # Hidden
+    id = w_menace_events.3
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        AND = {
+            has_technology = tech_w_corruption_theory
+            has_resource = { type = corruption amount > 3000 }
+            has_resource = { type = corruption amount < 10001 }
+            owner = {
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+            }
+        }
+    }
+    immediate = {
+        random_list = {
+            75 = {}
+            25 = {
+                country_event = {
+		            id = w_menace_events.4
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = w_menace_events.4
+    is_triggered_only = yes
+    title = "w_menace_events.4.name"
+    picture = GFX_evt_assembly_fight
+    desc = {
+        text = w_menace_events.4.desc
+    }
+    immediate = {
+        add_modifier = {
+             modifier = w_social_instability
+             months = 12
+        }
+    }
+    option = {
+        name = "w_menace_events.4.a"
+    }
+}
+
+country_event = {
+    id = w_menace_events.5
+    is_triggered_only = yes
+    hide_window = yes
+    immediate = {
+        75 = {}
+        20 = {
+            country_event = {
+                id = w_menace_events.6
+            }
+        }
+        5 = {
+            country_event = {
+                id = w_menace_events.7
+            }
+        }
+    }
+}
+
+country_event = {
+    id = w_menace_events.6
+    is_triggered_only = yes
+    title = "w_menace_events.6.name"
+    picture = GFX_evt_glitchy_matrix
+    desc = {
+        text = w_menace_events.6.desc
+    }
+    immediate = {
+        add_modifier = {
+            modifier = w_slower_energy_weapons
+            months = 12
+        }
+    }
+}
+
+country_event = {
+    id = w_menace_events.7
+    is_triggered_only = yes
+    title = "w_menace_events.7.name"
+    picture = GFX_evt_black_hole
+    desc = {
+        text = w_menace_events.7.desc
+    }
+    immediate = {
+		if = {
+			limit = { NOT = { exists = event_target:shroud_country } }
+			create_country = {
+				name = "NAME_Creatures_of_the_Shroud"
+				type = shroud_spirits
+				flag = {
+					icon = {
+						category = "special"
+						file = "the_shroud.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"dark_purple"
+						"black"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				establish_communications_no_message = root
+				save_global_event_target_as = shroud_country
+			}
+		}
+
+		random_system_within_border = {
+			save_event_target_as = shroud_spawn_system
+			random_system_planet = { save_event_target_as = shroud_spawn_planet }
+		}
+ 
+		create_fleet = {
+			name = "NAME_Corrupted_Avatar"
+			settings = {
+				spawn_debris = no
+				is_boss = yes
+			}			
+			effect = {
+				set_owner = event_target:shroud_country
+				create_ship = {
+					name = "NAME_Corrupted_Avatar"
+					design = "NAME_Corrupted_Avatar"
+				}
+				set_location = event_target:shroud_spawn_planet
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = return_point
+				set_aggro_range = 300
+			}
+		}
+		observer_event = { id = observer.68 }
+	}
+
+    option = {
+		name = "utopia.3024.a"
+	}
+}
