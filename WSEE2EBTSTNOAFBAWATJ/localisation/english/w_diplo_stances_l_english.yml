@@ -28,6 +28,12 @@
  policy_primitive_stance:0 "Primitive Policy"
  policy_primitive_stance_desc:0 "We can choose how we would fight primitives here."
  
+ ###################
+ #Edicts
+ #####################
+ edict_food_pop_edict: "Acquisition of biological materials."
+ edict_food_pop_edict_desc: "We can acquire large amounts of biological materials for our own purposes. Anyone who asks where it comes from gets added to the newl acquired biomass."
+
  #################################
  #Ground Combat Policy
  ############################

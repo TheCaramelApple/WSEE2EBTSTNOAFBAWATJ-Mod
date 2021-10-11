@@ -1,0 +1,1220 @@
+############
+#Flesh hulls
+############
+utility_component_template = {
+	key = "s_basic_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_1S
+	}
+	prerequisites = {
+		"tech_w_basic_flesh_printers"
+	}
+	component_set = flesh_1
+	upgrades_to = "s_living_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t1_cost
+		}
+		upkeep = {
+			food = @s_t1_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_basic_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_1M
+	}
+	prerequisites = {
+		"tech_w_basic_flesh_printers"
+	}
+	component_set = flesh_1
+	upgrades_to = "m_living_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t1_cost
+		}
+		upkeep = {
+			food = @m_t1_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_basic_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_1L
+	}
+	prerequisites = {
+		"tech_w_basic_flesh_printers"
+	}
+	component_set = flesh_1
+	upgrades_to = "l_living_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t1_cost
+		}
+		upkeep = {
+			food = @l_t1_upkeep_food
+		}
+	}
+}
+#Living Flesh Hull Section
+utility_component_template = {
+	key = "s_living_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_2S
+		ship_hull_regen_add_perc = 0.5
+	}
+	prerequisites = {
+		"tech_w_living_flesh_printing"
+	}
+	component_set = flesh_2
+	upgrades_to = "s_living_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t2_cost
+		}
+		upkeep = {
+			food = @s_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_living_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_2M
+		ship_hull_regen_add_perc = 0.5
+	}
+	prerequisites = {
+		"tech_w_living_flesh_printing"
+	}
+	component_set = flesh_2
+	upgrades_to = "m_living_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t2_cost
+		}
+		upkeep = {
+			food = @m_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_living_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_2L
+		ship_hull_regen_add_perc = 0.5
+	}
+	prerequisites = {
+		"tech_w_living_flesh_printing"
+	}
+	component_set = flesh_2
+	upgrades_to = "l_living_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t2_cost
+		}
+		upkeep = {
+			food = @l_t2_upkeep_food
+		}
+	}
+}
+#Enhanced Flesh Hull Section
+utility_component_template = {
+	key = "s_enhanced_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_2M
+	}
+	prerequisites = {
+		"tech_w_enhanced_flesh_printing"
+	}
+	component_set = flesh_3
+	upgrades_to = "s_living_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t2_cost
+		}
+		upkeep = {
+			food = @s_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_enhanced_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_2L
+	}
+	prerequisites = {
+		"tech_w_enhanced_flesh_printing"
+	}
+	component_set = flesh_3
+	upgrades_to = "s_living_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t2_cost
+		}
+		upkeep = {
+			food = @m_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_enhanced_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_3S
+	}
+	prerequisites = {
+		"tech_w_enhanced_flesh_printing"
+	}
+	component_set = flesh_3
+	upgrades_to = "s_living_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t2_cost
+		}
+		upkeep = {
+			food = @l_t2_upkeep_food
+		}
+	}
+}
+#Living Enhanced Flesh Hulls Section
+utility_component_template = {
+	key = "s_living_enhanced_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_3M
+		ship_hull_regen_add_perc = 1.25
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_flesh_printing"
+	}
+	component_set = flesh_4
+	upgrades_to = "s_bio_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t3_cost
+		}
+		upkeep = {
+			food = @s_t3_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_living_enhanced_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_3L
+		ship_hull_regen_add_perc = 1.25
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_flesh_printing"
+	}
+	component_set = flesh_4
+	upgrades_to = "m_bio_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t3_cost
+		}
+		upkeep = {
+			food = @m_t3_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_living_enhanced_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_4S
+		ship_hull_regen_add_perc = 1.25
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_flesh_printing"
+	}
+	component_set = flesh_4
+	upgrades_to = "l_bio_enhanced_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t3_cost
+		}
+		upkeep = {
+			food = @l_t3_upkeep_food
+		}
+	}
+}
+#Bio Enhanced Flesh Hull
+utility_component_template = {
+	key = "s_bio_enhanced_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_4M
+		ship_hull_regen_add_perc = 2.0
+	}
+	prerequisites = {
+		"tech_w_bio_enhanced_flesh_printing"
+	}
+	component_set = flesh_5
+	upgrades_to = "s_bio_nano_machine_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t4_cost
+		}
+		upkeep = {
+			food = @s_t4_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_bio_enhanced_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_4L
+		ship_hull_regen_add_perc = 2.0
+	}
+	prerequisites = {
+		"tech_w_bio_enhanced_flesh_printing"
+	}
+	component_set = flesh_5
+	upgrades_to = "m_bio_nano_machine_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t4_cost
+		}
+		upkeep = {
+			food = @m_t4_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_bio_enhanced_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_5S
+		ship_hull_regen_add_perc = 2.0
+	}
+	prerequisites = {
+		"tech_w_bio_enhanced_flesh_printing"
+	}
+	component_set = flesh_5
+	upgrades_to = "l_bio_nano_machine_flesh_hull"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t4_cost
+		}
+		upkeep = {
+			food = @l_t4_upkeep_food
+		}
+	}
+}
+#Nano Machine Flesh Hulls
+utility_component_template = {
+	key = "s_nano_machine_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_5M
+	}
+	prerequisites = {
+		"tech_w_nano_machine_flesh_printers"
+	}
+	component_set = flesh_6
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t5_cost
+		}
+		upkeep = {
+			food = @s_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_nano_machine_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_5L
+	}
+	prerequisites = {
+		"tech_w_nano_machine_flesh_printers"
+	}
+	component_set = flesh_6
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t5_cost
+		}
+		upkeep = {
+			food = @m_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_nano_machine_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_6S
+	}
+	prerequisites = {
+		"tech_w_nano_machine_flesh_printers"
+	}
+	component_set = flesh_6
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t5_cost
+		}
+		upkeep = {
+			food = @l_t5_upkeep_food
+		}
+	}
+}
+#Bio Nano Machines Flesh Hull Section
+utility_component_template = {
+	key = "s_bio_nano_machine_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_5S
+		ship_hull_regen_add_perc = 3.0
+	}
+	prerequisites = {
+		"tech_w_bio_nano_machine_flesh_printers"
+	}
+	component_set = flesh_7
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t5_cost
+		}
+		upkeep = {
+			food = @s_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_bio_nano_machine_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_5M
+		ship_hull_regen_add_perc = 3.0
+	}
+	prerequisites = {
+		"tech_w_bio_nano_machine_flesh_printers"
+	}
+	component_set = flesh_7
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t5_cost
+		}
+		upkeep = {
+			food = @m_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_bio_nano_machine_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_5L
+		ship_hull_regen_add_perc = 3.0
+	}
+	prerequisites = {
+		"tech_w_bio_nano_machine_flesh_printers"
+	}
+	component_set = flesh_7
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t5_cost
+		}
+		upkeep = {
+			food = @l_t5_upkeep_food
+		}
+	}
+}
+#Sapient Flesh Hull Section
+utility_component_template = {
+	key = "s_sapient_flesh_hull"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_6S
+		ship_hull_regen_add_perc = 3.75
+	}
+	prerequisites = {
+		"tech_w_sapient_flesh_printers"
+	}
+	component_set = flesh_8
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t6_cost
+		}
+		upkeep = {
+			food = @s_t6_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_sapient_flesh_hull"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_6M
+		ship_hull_regen_add_perc = 3.75
+	}
+	prerequisites = {
+		"tech_w_sapient_flesh_printers"
+	}
+	component_set = flesh_8
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t6_cost
+		}
+		upkeep = {
+			food = @m_t6_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_sapient_flesh_hull"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_hull_add = @armor_6L
+		ship_hull_regen_add_perc = 3.75
+	}
+	prerequisites = {
+		"tech_w_sapient_flesh_printers"
+	}
+	component_set = flesh_8
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t6_cost
+		}
+		upkeep = {
+			food = @l_t6_upkeep_food
+		}
+	}
+}
+
+########################
+#Bone Armor
+######################
+utility_component_template = {
+	key = "s_basic_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_1S
+	}
+	prerequisites = {
+		"tech_w_basic_skeleton_printers"
+	}
+	component_set = bone_1
+	upgrades_to = "s_living_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t1_cost
+		}
+		upkeep = {
+			food = @s_t1_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_basic_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_1M
+	}
+	prerequisites = {
+		"tech_w_basic_skeleton_printers"
+	}
+	component_set = bone_1
+	upgrades_to = "m_living_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t1_cost
+		}
+		upkeep = {
+			food = @m_t1_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_basic_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_1L
+	}
+	prerequisites = {
+		"tech_w_basic_skeleton_printers"
+	}
+	component_set = bone_1
+	upgrades_to = "l_living_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t1_cost
+		}
+		upkeep = {
+			food = @l_t1_upkeep_food
+		}
+	}
+}
+# Living Bone Armor Section
+utility_component_template = {
+	key = "s_living_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_2S
+		ship_hull_regen_add_perc = 0.5
+	}
+	prerequisites = {
+		"tech_w_living_skeleton_printing"
+	}
+	component_set = bone_2
+	upgrades_to = "s_living_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t2_cost
+		}
+		upkeep = {
+			food = @s_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_living_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_2M
+		ship_hull_regen_add_perc = 0.5
+	}
+	prerequisites = {
+		"tech_w_living_skeleton_printing"
+	}
+	component_set = bone_2
+	upgrades_to = "m_living_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t2_cost
+		}
+		upkeep = {
+			food = @m_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_living_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_2L
+		ship_hull_regen_add_perc = 0.5
+	}
+	prerequisites = {
+		"tech_w_living_skeleton_printing"
+	}
+	component_set = bone_2
+	upgrades_to = "l_living_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t2_cost
+		}
+		upkeep = {
+			food = @l_t2_upkeep_food
+		}
+	}
+}
+#Enhanced Bone Armor Section
+utility_component_template = {
+	key = "s_enhanced_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_2M
+	}
+	prerequisites = {
+		"tech_w_enhanced_skeleton_printing"
+	}
+	component_set = bone_3
+	upgrades_to = "s_living_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t2_cost
+		}
+		upkeep = {
+			food = @s_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_enhanced_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_2L
+	}
+	prerequisites = {
+		"tech_w_enhanced_skeleton_printing"
+	}
+	component_set = bone_3
+	upgrades_to = "m_living_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t2_cost
+		}
+		upkeep = {
+			food = @m_t2_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_enhanced_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_3S
+	}
+	prerequisites = {
+		"tech_w_enhanced_skeleton_printing"
+	}
+	component_set = bone_3
+	upgrades_to = "l_living_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t2_cost
+		}
+		upkeep = {
+			food = @l_t2_upkeep_food
+		}
+	}
+}
+#Living Enhanced Bone Armor Section
+utility_component_template = {
+	key = "s_living_enhanced_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_3M
+		ship_hull_regen_add_perc = 1.25
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_skeleton_printing"
+	}
+	component_set = bone_4
+	upgrades_to = "s_bio_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t3_cost
+		}
+		upkeep = {
+			food = @s_t3_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_living_enhanced_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_3L
+		ship_hull_regen_add_perc = 1.25
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_skeleton_printing"
+	}
+	component_set = bone_4
+	upgrades_to = "m_bio_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t3_cost
+		}
+		upkeep = {
+			food = @m_t3_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_living_enhanced_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_4S
+		ship_hull_regen_add_perc = 1.25
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_skeleton_printing"
+	}
+	component_set = bone_4
+	upgrades_to = "l_bio_enhanced_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t3_cost
+		}
+		upkeep = {
+			food = @l_t3_upkeep_food
+		}
+	}
+}
+#Bio Enhanced Bone Armor Section
+utility_component_template = {
+	key = "s_bio_enhanced_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_4M
+		ship_hull_regen_add_perc = 2.0
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_skeleton_printing"
+	}
+	component_set = bone_5
+	upgrades_to = "s_bio_nano_machine_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t4_cost
+		}
+		upkeep = {
+			food = @s_t4_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_bio_enhanced_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_4L
+		ship_hull_regen_add_perc = 2.0
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_skeleton_printing"
+	}
+	component_set = bone_5
+	upgrades_to = "m_bio_nano_machine_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t4_cost
+		}
+		upkeep = {
+			food = @m_t4_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_bio_enhanced_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_5S
+		ship_hull_regen_add_perc = 2.0
+	}
+	prerequisites = {
+		"tech_w_living_enhanced_skeleton_printing"
+	}
+	component_set = bone_5
+	upgrades_to = "l_bio_nano_machine_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t4_cost
+		}
+		upkeep = {
+			food = @s_t4_upkeep_food
+		}
+	}
+}
+#Nano Machine Bone Armor Section
+utility_component_template = {
+	key = "s_nano_machine_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_5M
+	}
+	prerequisites = {
+		"tech_w_nano_machine_skeleton_printers"
+	}
+	component_set = bone_6
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t5_cost
+		}
+		upkeep = {
+			food = @s_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_nano_machine_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_5L
+	}
+	prerequisites = {
+		"tech_w_nano_machine_skeleton_printers"
+	}
+	component_set = bone_6
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t5_cost
+		}
+		upkeep = {
+			food = @m_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_nano_machine_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_6S
+	}
+	prerequisites = {
+		"tech_w_nano_machine_skeleton_printers"
+	}
+	component_set = bone_6
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t5_cost
+		}
+		upkeep = {
+			food = @l_t5_upkeep_food
+		}
+	}
+}
+#Bio Nano Machine Bone Armor Section
+utility_component_template = {
+	key = "s_bio_nano_machine_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_5S
+		ship_hull_regen_add_perc = 3.0
+	}
+	prerequisites = {
+		"tech_w_bio_nano_machine_skeleton_printers"
+	}
+	component_set = bone_7
+	upgrades_to = "s_sapient_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t5_cost
+		}
+		upkeep = {
+			food = @s_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_bio_nano_machine_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_5M
+		ship_hull_regen_add_perc = 3.0
+	}
+	prerequisites = {
+		"tech_w_bio_nano_machine_skeleton_printers"
+	}
+	component_set = bone_7
+	upgrades_to = "m_sapient_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t5_cost
+		}
+		upkeep = {
+			food = @m_t5_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_bio_nano_machine_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_5L
+		ship_hull_regen_add_perc = 3.0
+	}
+	prerequisites = {
+		"tech_w_bio_nano_machine_skeleton_printers"
+	}
+	component_set = bone_7
+	upgrades_to = "l_sapient_bone_armor"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t5_cost
+		}
+		upkeep = {
+			food = @l_t5_upkeep_food
+		}
+	}
+}
+#Sapient Bone Armor Section
+utility_component_template = {
+	key = "s_sapient_bone_armor"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_6S
+		ship_hull_regen_add_perc = 3.75
+	}
+	prerequisites = {
+		"tech_w_sapient_skeleton_printers"
+	}
+	component_set = bone_8
+	resources = {
+		category = ship_components
+		cost = {
+			food = @s_t6_cost
+		}
+		upkeep = {
+			food = @s_t6_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "m_sapient_bone_armor"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_6M
+		ship_hull_regen_add_perc = 3.75
+	}
+	prerequisites = {
+		"tech_w_sapient_skeleton_printers"
+	}
+	component_set = bone_8
+	resources = {
+		category = ship_components
+		cost = {
+			food = @m_t6_cost
+		}
+		upkeep = {
+			food = @m_t6_upkeep_food
+		}
+	}
+}
+
+utility_component_template = {
+	key = "l_sapient_bone_armor"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @armor_6L
+		ship_hull_regen_add_perc = 3.75
+	}
+	prerequisites = {
+		"tech_w_sapient_skeleton_printers"
+	}
+	component_set = bone_8
+	resources = {
+		category = ship_components
+		cost = {
+			food = @l_t6_cost
+		}
+		upkeep = {
+			food = @l_t6_upkeep_food
+		}
+	}
+}

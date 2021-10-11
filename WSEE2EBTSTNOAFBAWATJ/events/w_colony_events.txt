@@ -1,1 +1,16 @@
 namespace = w_colony_events
+
+country_event = {#yoink pops for food
+	id = w_colony_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_pop = {
+			kill_pop = yes
+		}
+		add_resource = {
+			food = 500
+		}
+	}
+}

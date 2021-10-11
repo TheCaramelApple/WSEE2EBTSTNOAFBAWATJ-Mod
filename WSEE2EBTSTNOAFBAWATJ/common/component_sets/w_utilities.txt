@@ -1,0 +1,146 @@
+#Flesh Hull Section
+component_set = {
+	key = "flesh_1"
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_2"
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_3"
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_4"
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_5"
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_6"
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_7"
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "flesh_8"
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+#Bone Armor Section
+component_set = {
+	key = "bone_1"
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_2"
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_3"
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_4"
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_5"
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_6"
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_7"
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bone_8"
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+######################
+#Brain Shields
+##############
+component_set = {
+	key = "brain_1"
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_2"
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_3"
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_4"
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_5"
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_6"
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_7"
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "brain_8"
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+}

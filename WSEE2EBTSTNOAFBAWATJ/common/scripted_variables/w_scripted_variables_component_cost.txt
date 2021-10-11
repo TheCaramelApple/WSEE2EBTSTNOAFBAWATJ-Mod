@@ -1,0 +1,23 @@
+@s_t1_upkeep_food = 0.020
+@m_t1_upkeep_food = 0.040
+@l_t1_upkeep_food = 0.080
+
+@s_t2_upkeep_food = 0.026
+@m_t2_upkeep_food = 0.052
+@l_t2_upkeep_food = 0.104
+
+@s_t3_upkeep_food = 0.034
+@m_t3_upkeep_food = 0.068
+@l_t3_upkeep_food = 0.136
+
+@s_t4_upkeep_food = 0.034
+@m_t4_upkeep_food = 0.068
+@l_t4_upkeep_food = 0.136
+
+@s_t5_upkeep_food = 0.044
+@m_t5_upkeep_food = 0.088
+@l_t5_upkeep_food = 0.196
+
+@s_t6_upkeep_food = 0.058
+@m_t6_upkeep_food = 0.104
+@l_t6_upkeep_food = 0.228

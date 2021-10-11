@@ -1,0 +1,21 @@
+food_pop_edict = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = edicts
+		cost = {
+			influence = 10
+		}
+	}	
+	potential = {
+		has_technology = tech_w_tissue_printers
+	}
+	effect = {
+		random_owned_pop = {
+			kill_pop = yes
+		}
+		add_resource = {
+			food = 500
+		}
+	}
+}

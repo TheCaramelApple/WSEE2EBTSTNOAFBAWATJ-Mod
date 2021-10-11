@@ -7,9 +7,9 @@ tb_others_group = {
 		sr_zro
 		sr_dark_matter
 		nanites
-                menace
+        menace
 		corruption
-                corrupted_alloys
+        corrupted_alloys
 	}
 	localization = {
 		"RESOURCE_GROUP_DEFAULT" = default

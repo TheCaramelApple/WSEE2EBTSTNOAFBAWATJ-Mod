@@ -1195,7 +1195,7 @@ tech_w_nano_machines = {
 		biology
 	}
 	tier = 4
-	prerequisites = {"tech_w_inorganic_tissue_printers" "tech_w_bio_enhanced_flesh_printing" "tech_w_bio_enhanced_skeleton_printing" tech_w_bio_enhanced_brain_printing}
+	prerequisites = {"tech_w_inorganic_tissue_printers" "tech_w_bio_enhanced_flesh_printing" "tech_w_bio_enhanced_skeleton_printing" "tech_w_bio_enhanced_brain_printing"}
 	weight = @tier4weight2
 	
 	weight_modifier = {
@@ -1219,6 +1219,370 @@ tech_w_nano_machines = {
 		}
 	}
 }
+
+tech_w_bio_nano_machines = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_nano_machines" }
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_nano_machine_flesh_printers = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_nano_machines" }
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_nano_machine_skeleton_printers = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_nano_machines" }
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_nano_machine_brain_printers = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_nano_machines" }
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_bio_nano_machine_flesh_printers = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_bio_nano_machines" "tech_w_nano_machine_flesh_printers"}
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_bio_nano_machine_skeleton_printers = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_bio_nano_machines" "tech_w_nano_machine_skeleton_printers"}
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_bio_nano_machine_brain_printers = {
+	icon = tech_genome_mapping
+	cost = @tier4cost2
+	area = society
+	category = {
+		biology
+	}
+	tier = 4
+	prerequisites = {"tech_w_bio_nano_machines" "tech_w_nano_machine_brain_printers"}
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_sapience_printing = {
+	icon = tech_genome_mapping
+	cost = @tier5cost2
+	area = society
+	category = {
+		biology
+	}
+	tier =5
+	prerequisites = {"tech_w_bio_nano_machine_flesh_printers" "tech_w_bio_nano_machine_skeleton_printers" "tech_w_bio_nano_machine_brain_printers"}
+	weight = @tier5weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_sapient_flesh_printers = {
+	icon = tech_genome_mapping
+	cost = @tier5cost2
+	area = society
+	category = {
+		biology
+	}
+	tier =5
+	prerequisites = {"tech_w_sapience_printing"}
+	weight = @tier5weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_sapient_skeleton_printers = {
+	icon = tech_genome_mapping
+	cost = @tier5cost2
+	area = society
+	category = {
+		biology
+	}
+	tier =5
+	prerequisites = {"tech_w_sapience_printing"}
+	weight = @tier5weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_w_sapient_brain_printers = {
+	icon = tech_genome_mapping
+	cost = @tier5cost2
+	area = society
+	category = {
+		biology
+	}
+	tier =5
+	prerequisites = {"tech_w_sapience_printing"}
+	weight = @tier5weight2
+	
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
 ################################
 #FOR LATER CODE
 #tech_genome_mapping

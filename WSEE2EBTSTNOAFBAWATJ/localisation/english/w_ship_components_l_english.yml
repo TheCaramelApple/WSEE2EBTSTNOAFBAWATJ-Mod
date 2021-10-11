@@ -1,2 +1,151 @@
 ﻿l_english:
+##################
+#Flesh Hull
+#############
+ s_basic_flesh_hull: "Small Basic Flesh Hull"
+ flesh_1: "Basic Flesh Hull"
+ flesh_1_DESC: "Sections of hull replaced with printed flesh."
+ m_basic_flesh_hull: "Medium Basic Flesh Hull"
+ l_basic_flesh_hull: "Large Basic Flesh Hull"
+
+ s_living_flesh_hull: "Small Living Flesh Hull"
+ flesh_2: "Living Flesh Hull"
+ flesh_2_DESC: "The flesh hall replacements are now alive, and are now capable of regenerating small amounts of damage."
+ m_living_flesh_hull: "Medium Living Flesh Hull"
+ l_living_flesh_hull: "Large Living Flesh Hull"
+
+ flesh_3: "Enhanced Flesh Hull"
+ flesh_3_DESC: "While this flesh wall is enhanced, it loses the regeneration capability of its counterpart."
+ s_enhanced_flesh_hull: "Small Enhanced Flesh Hull"
+ m_enhanced_flesh_hull: "Medium Enhanced Flesh Hull"
+ l_enhanced_flesh_hull: "Large Enhanced Flesh Hull"
+
+ flesh_4: "Living Enhanced Flesh Hull"
+ flesh_4_DESC: "Flesh hulls that keep both their toughness and their regeneration."
+ s_living_enhanced_flesh_hull: "Small Living Enhanced Flesh Hull"
+ m_living_enhanced_flesh_hull: "Medium Living Enhanced Flesh Hull"
+ l_living_enhanced_flesh_hull: "Large Living Enhanced Flesh Hull"
+
+ flesh_5: "Bio Enhanced Flesh Hull"
+ flesh_5_DESC: "Living flesh hulls that have had inorganic synthetic tissues added as extra stability and to increase durability."
+ s_bio_enhanced_flesh_hull: "Small Bio Enhanced Flesh Hull"
+ m_bio_enhanced_flesh_hull: "Medium Bio Enhanced Flesh Hull"
+ l_bio_enhanced_flesh_hull: "Large Bio Enhanced Flesh Hull"
  
+ flesh_6: "Nano Machine Flesh Hull"
+ flesh_6_DESC: "Flesh hulls imbued with billions of nano machines, makes it much tougher but due to the nano machines functions it loses regeneration capabilities."
+ s_nano_machine_flesh_hull: "Small Nano Machine Flesh Hull"
+ m_nano_machine_flesh_hull: "Medium Nano Machine Flesh Hull"
+ l_nano_machine_flesh_hull: "Large Nano Machine Flesh Hull"
+
+ flesh_7: "Bio Nano Machine Flesh Hull"
+ flesh_7_DESC: "Flesh hulls that sacrifice some toughness of their regular nano machine counterparts but in return get greater regeneration."
+ s_bio_nano_machine_flesh_hull: "Small Bio Nano Machine Flesh Hull"
+ m_bio_nano_machine_flesh_hull: "Medium Bio Nano Machine Flesh Hull"
+ l_bio_nano_machine_flesh_hull: "Large Bio Nano Machine Flesh Hull"
+
+ flesh_8: "Sapient Flesh Hull"
+ flesh_8_DESC: "A sapient flesh hull, as conscious as you or I. Capable of accurately determining where best to start regeneration proccesses as well as how to best protect the crew."
+ s_sapient_flesh_hull: "Small Sapient Flesh Hull"
+ m_sapient_flesh_hull: "Medium Sapient Flesh Hull"
+ l_sapient_flesh_hull: "Large Sapient Flesh Hull"
+####################
+#Bone Armor
+######################
+ bone_1: "Basic Bone Armor"
+ bone_1_DESC: "Sections of armor replaced with printed bones."
+ s_basic_bone_armor: "Small Basic Bone Armor"
+ m_basic_bone_armor: "Medium Basic Bone Armor"
+ l_basic_bone_armor: "Large Basic Bone Armor"
+
+ bone_2: "Living Bone Armor"
+ bone_2_DESC: "Living bone that is capable of some limited regeneration"
+ s_living_bone_armor: "Small Living Bone Armor"
+ m_living_bone_armor: "Medium Living Bone Armor"
+ l_living_bone_armor: "Large Living Bone Armor"
+
+ bone_3: "Enhanced Bone Armor"
+ bone_3_DESC: "Bone Armor that is significantly stronger than its living counterpart, although at the expense of regeneration capabilities."
+ s_enhanced_bone_armor: "Small Enhanced Bone Armor"
+ m_enhanced_bone_armor: "Medium Enhanced Bone Armor"
+ l_enhanced_bone_armor: "Large Enhanced Bone Armor"
+
+ bone_4: "Living Enhanced Bone Armor"
+ bone_4_DESC: "Enhanced bone armor that not only keeps but also improves on the regeneration of its non enhanced counterpart."
+ s_living_enhanced_bone_armor: "Small Living Enhanced Bone Armor"
+ m_living_enhanced_bone_armor: "Medium Living Enhanced Bone Armor"
+ l_living_enhanced_bone_armor: "Large Living Enhanced Bone Armor"
+
+ bone_5: "Bio Enhanced Bone Armor"
+ bone_5_DESC: "By adding additional layers of inorganic synthetic tissues the defensive capabilites of printed bone exceeds that of high quality steel."
+ s_bio_enhanced_bone_armor: "Small Bio Enhanced Bone Armor"
+ m_bio_enhanced_bone_armor: "Medium Bio Enhnaced Bone Armor"
+ l_bio_enhanced_bone_armor: "Large Bio Enhanced Bone Armor"
+
+ bone_6: "Nano Machine Bone Armor"
+ bone_6_DESC: "Nano machine enhanced bones are much tougher than their predeccessors but they lose their regenerative abiliites."
+ s_nano_machine_bone_armor: "Small Nano Machine Bone Armor"
+ m_nano_machine_bone_armor: "Medium Nano Machine Bone Armor"
+ l_nano_machine_bone_armor: "Large Nano Machine Bone Armor"
+
+ bone_7: "Bio Nano Machine Bone Armor"
+ bone_7_DESC: "Bones that have both increased regeneration and durability, though the durability is lower than their nano machine counter parts."
+ s_bio_nano_machine_bone_armor: "Small Bio Nano Machine Bone Armor"
+ m_bio_nano_machine_bone_armor: "Medium Bio Nano Machine Bone Armor"
+ l_bio_nano_machine_bone_armor: "Large Bio Nano Machine Bone Armor"
+ 
+ bone_8: "Sapient Bone Armor"
+ bone_8_DESC: "Bone armor that is sapient, as if being able to shrug off rounds fired from battleship sized weaponry wasn't enough for it."
+ s_sapient_bone_armor: "Small Sapient Bone Armor"
+ m_sapient_bone_armor: "Medium Sapient Bone Armor"
+ l_sapient_bone_armor: "Large Sapient Bone Armor"
+#################
+#Brain Shield 
+################
+ brain_1: "Basic Brain Shield"
+ brain_1_DESC: "A basic printed brain shield, deploy these to abosrb enemy firepower."
+ s_basic_brain_shield: "Small Basic Brain Shield"
+ m_basic_brain_shield: "Medium Basic Brain Shield"
+ l_basic_brain_shield: "Large Basic Brain Shield"
+
+ brain_2: "Living Brain Shield"
+ brain_2_DESC: "A living printed brain, capable of assisting in the calculations required to launch them in the correct trajectories."
+ s_living_brain_shield: "Small Living Brain Shield"
+ m_living_brain_shield: "Medium Living Brain Shield"
+ l_living_brain_shield: "Large Living Brain Shield"
+ 
+ brain_3: "Enhanced Brain Shield"
+ brain_3_DESC: "An enhanced brain, while no longer capable of assisting in calculations it is capable of absorbing more firepower before turning into red mist. "
+ s_enhanced_brain_shield: "Small Enhanced Brain Shield"
+ m_enhanced_brain_shield: "Medium Enhanced Brain Shield"
+ l_enhanced_brain_shield: "Large Enhanced Brain Shield"
+
+ brain_4: "Living Enhanced Brain Shield"
+ brain_4_DESC: "A living enhanced brain capable of assisting in calculations once more."
+ s_living_enhanced_brain_shield: "Small Living Enhanced Brain Shield"
+ m_living_enhanced_brain_shield: "Medium Living Enhanced Brain Shield"
+ l_living_enhanced_brain_shield: "Large Living Enhanced Brain Shield"
+
+ brain_5: "Bio Enhanced Brain Shield"
+ brain_5_DESC: "Bio enhanced brains are capable of assisting in processing trajectories while simultainously growing or regrowing new sections."
+ s_bio_enhanced_brain_shield: "Small Bio Enhanced Brain Shield"
+ m_bio_enhanced_brain_shield: "Medium Bio Enhanced Brain Shield"
+ l_bio_enhanced_brain_shield: "Large Bio Enhanced Brain Shield"
+
+ brain_6: "Nano Machine Brain Shield"
+ brain_6_DESC: "Nano mahcine enhanced brain shields are capable of stopping most medium to high end firepower without losing complete fumctionalitiy."
+ s_nano_machine_brain_shield: "Small Nano Machine Brain Shield"
+ m_nano_machine_brain_shield: "Medium Nano Machine Brain Shield"
+ l_nano_machine_brain_shield: "Large Nano Machine Brain Shield"
+
+ brain_7: "Bio Nano Machine Brain Shield"
+ brain_7_DESC: "These brains are capable of regeneration as well as high end protective powers."
+ s_bio_nano_machine_brain_shield: "Small Bio Machine Brain Shield"
+ m_bio_nano_machine_brain_shield: "Medium Bio Machine Brain Shield"
+ l_bio_nano_machine_brain_shield: "Large Bio Machine Brain Shield"
+
+ brain_8: "Sapient Brain Shield"
+ brain_8_DESC: "Fully conscious brains being grown and sent to die, what a lovely way to fight war."
+ s_sapient_brain_shield: "Small Sapient Brain Shield"
+ m_sapient_brain_shield: "Medium Sapient Brain Shield"
+ l_sapient_brain_shield: "Large Sapient Brain Shield"
